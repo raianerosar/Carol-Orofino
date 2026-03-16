@@ -41,7 +41,7 @@ export const projects: Project[] = [
     slug: 'apartamento-jardins',
     category: 'residencial',
     year: 2024,
-    location: 'São Paulo, SP',
+    location: 'Florianópolis, SC',
     coverImage: '/images/projects/apartamento-jardins/cover.jpg',
     coverImageAlt: {
       pt: 'Sala de estar com sofá bege e detalhes em madeira natural',
@@ -82,7 +82,7 @@ export const projects: Project[] = [
     slug: 'escritorio-itaim',
     category: 'comercial',
     year: 2023,
-    location: 'São Paulo, SP',
+    location: 'Florianópolis, SC',
     coverImage: '/images/projects/escritorio-itaim/01.png',
     coverImageAlt: {
       pt: 'Área de trabalho aberta com jardim vertical, madeira nobre e vista para São Paulo',
@@ -123,7 +123,7 @@ export const projects: Project[] = [
     slug: 'casa-higienopolis',
     category: 'reforma',
     year: 2024,
-    location: 'São Paulo, SP',
+    location: 'Florianópolis, SC',
     coverImage: '/images/projects/casa-higienopolis/cover.png',
     coverImageAlt: {
       pt: 'Casa reformada com fachada renovada e jardim frontal',
