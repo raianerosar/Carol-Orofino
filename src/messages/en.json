@@ -1,0 +1,57 @@
+{
+  "nav": {
+    "projects": "Projects",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "home": {
+    "tagline": "Interior Design that transforms spaces into experiences",
+    "viewAllProjects": "View all projects",
+    "aboutTitle": "Carol Orofino",
+    "aboutTeaser": "I believe every space tells a story. With over 10 years of experience, I create environments that unite functionality, beauty, and identity.",
+    "aboutLink": "Learn more"
+  },
+  "projects": {
+    "title": "Projects",
+    "filter": {
+      "all": "All",
+      "residencial": "Residential",
+      "comercial": "Commercial",
+      "reforma": "Renovation",
+      "consultoria": "Consulting"
+    }
+  },
+  "project": {
+    "location": "Location",
+    "year": "Year",
+    "category": "Category",
+    "whatsappCta": "I want a project like this",
+    "whatsappMessage": "Hello Carol, I'm interested in the {title} project and would like to know more."
+  },
+  "about": {
+    "title": "About Carol Orofino",
+    "bio": "Carol Orofino is an interior designer graduated from Mackenzie University, with a specialization in Sustainable Design. Over more than 10 years of career, she has developed residential and commercial projects that translate the personality of her clients into unique and functional spaces.",
+    "philosophy": "Design Philosophy",
+    "philosophyText": "I believe interior design goes beyond aesthetics. It's about creating spaces that transform the experience of those who live in them — spaces that inspire, welcome, and endure."
+  },
+  "services": {
+    "title": "Services"
+  },
+  "contact": {
+    "title": "Contact",
+    "whatsappLabel": "Chat on WhatsApp",
+    "whatsappMessage": "Hello Carol, I'd like to know more about your services.",
+    "emailLabel": "Email",
+    "instagramLabel": "Instagram",
+    "followOn": "Follow on Instagram"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you are looking for does not exist.",
+    "back": "Back to home"
+  }
+}

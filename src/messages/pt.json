@@ -1,0 +1,57 @@
+{
+  "nav": {
+    "projects": "Projetos",
+    "about": "Sobre",
+    "services": "Serviços",
+    "contact": "Contato"
+  },
+  "home": {
+    "tagline": "Design de Interiores que transforma espaços em experiências",
+    "viewAllProjects": "Ver todos os projetos",
+    "aboutTitle": "Carol Orofino",
+    "aboutTeaser": "Acredito que cada espaço conta uma história. Com mais de 10 anos de experiência, crio ambientes que unem funcionalidade, beleza e identidade.",
+    "aboutLink": "Conheça mais"
+  },
+  "projects": {
+    "title": "Projetos",
+    "filter": {
+      "all": "Todos",
+      "residencial": "Residencial",
+      "comercial": "Comercial",
+      "reforma": "Reforma",
+      "consultoria": "Consultoria"
+    }
+  },
+  "project": {
+    "location": "Localização",
+    "year": "Ano",
+    "category": "Categoria",
+    "whatsappCta": "Quero um projeto assim",
+    "whatsappMessage": "Olá Carol, me interessei pelo projeto {title} e gostaria de saber mais."
+  },
+  "about": {
+    "title": "Sobre Carol Orofino",
+    "bio": "Carol Orofino é designer de interiores formada pela Universidade Mackenzie, com especialização em Design Sustentável. Ao longo de mais de 10 anos de carreira, desenvolveu projetos residenciais e comerciais que traduzem a personalidade dos clientes em espaços únicos e funcionais.",
+    "philosophy": "Filosofia de Design",
+    "philosophyText": "Acredito que o design de interiores vai além da estética. É sobre criar espaços que transformam a experiência de quem vive neles — espaços que inspiram, acolhem e duram."
+  },
+  "services": {
+    "title": "Serviços"
+  },
+  "contact": {
+    "title": "Contato",
+    "whatsappLabel": "Fale pelo WhatsApp",
+    "whatsappMessage": "Olá Carol, gostaria de saber mais sobre seus serviços.",
+    "emailLabel": "E-mail",
+    "instagramLabel": "Instagram",
+    "followOn": "Siga no Instagram"
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados."
+  },
+  "notFound": {
+    "title": "Página não encontrada",
+    "description": "A página que você procura não existe.",
+    "back": "Voltar ao início"
+  }
+}

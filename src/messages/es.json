@@ -1,0 +1,57 @@
+{
+  "nav": {
+    "projects": "Proyectos",
+    "about": "Sobre mí",
+    "services": "Servicios",
+    "contact": "Contacto"
+  },
+  "home": {
+    "tagline": "Diseño de Interiores que transforma espacios en experiencias",
+    "viewAllProjects": "Ver todos los proyectos",
+    "aboutTitle": "Carol Orofino",
+    "aboutTeaser": "Creo que cada espacio cuenta una historia. Con más de 10 años de experiencia, creo ambientes que unen funcionalidad, belleza e identidad.",
+    "aboutLink": "Conocer más"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "filter": {
+      "all": "Todos",
+      "residencial": "Residencial",
+      "comercial": "Comercial",
+      "reforma": "Reforma",
+      "consultoria": "Consultoría"
+    }
+  },
+  "project": {
+    "location": "Ubicación",
+    "year": "Año",
+    "category": "Categoría",
+    "whatsappCta": "Quiero un proyecto así",
+    "whatsappMessage": "Hola Carol, me interesó el proyecto {title} y me gustaría saber más."
+  },
+  "about": {
+    "title": "Sobre Carol Orofino",
+    "bio": "Carol Orofino es diseñadora de interiores graduada por la Universidad Mackenzie, con especialización en Diseño Sostenible. A lo largo de más de 10 años de carrera, ha desarrollado proyectos residenciales y comerciales que traducen la personalidad de sus clientes en espacios únicos y funcionales.",
+    "philosophy": "Filosofía de Diseño",
+    "philosophyText": "Creo que el diseño de interiores va más allá de la estética. Se trata de crear espacios que transformen la experiencia de quienes los habitan — espacios que inspiran, acogen y perduran."
+  },
+  "services": {
+    "title": "Servicios"
+  },
+  "contact": {
+    "title": "Contacto",
+    "whatsappLabel": "Hablar por WhatsApp",
+    "whatsappMessage": "Hola Carol, me gustaría saber más sobre sus servicios.",
+    "emailLabel": "Correo electrónico",
+    "instagramLabel": "Instagram",
+    "followOn": "Seguir en Instagram"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados."
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "description": "La página que buscas no existe.",
+    "back": "Volver al inicio"
+  }
+}
