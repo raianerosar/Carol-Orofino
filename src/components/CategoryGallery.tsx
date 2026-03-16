@@ -24,7 +24,7 @@ export default function CategoryGallery({ images, locale }: Props) {
         const setZoomed = setters[i]
         return (
           <div
-            key={i}
+            key={image.src}
             className={`relative overflow-hidden ${zoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'}`}
             onClick={() => setZoomed(!zoomed)}
           >
