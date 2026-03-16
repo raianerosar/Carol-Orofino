@@ -14,6 +14,7 @@
   },
   "projects": {
     "title": "Projects",
+    "noResults": "No projects found.",
     "filter": {
       "all": "All",
       "residencial": "Residential",
