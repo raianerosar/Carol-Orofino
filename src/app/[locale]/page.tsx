@@ -2,9 +2,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { getTranslations } from 'next-intl/server'
-import { getFeaturedProjects } from '@/data/projects'
-import ProjectCard from '@/components/ProjectCard'
-import { type Locale } from '@/lib/i18n'
 import type { Metadata } from 'next'
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://carolorofino.com.br'
@@ -31,22 +28,23 @@ export default async function HomePage({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
-  const featured = getFeaturedProjects()
   const t = await getTranslations({ locale, namespace: 'home' })
 
   return (
     <>
       {/* Hero */}
-      <section className="relative h-screen w-full">
+      <section className="relative h-[80vh] w-full">
+        {/* Mobile hero */}
         <Image
-          src="/hero-brand-mobile.jpg"
+          src="/hero-mobile.png"
           alt="Carol Orofino Interior Design"
           fill
           priority
           className="object-cover md:hidden"
         />
+        {/* Desktop hero */}
         <Image
-          src="/hero-brand-desktop.png"
+          src="/hero.png"
           alt="Carol Orofino Interior Design"
           fill
           priority
@@ -54,28 +52,95 @@ export default async function HomePage({
         />
       </section>
 
-      {/* Featured Projects */}
-      <section className="pb-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          {featured.map((project) => (
-            <ProjectCard
-              key={project.slug}
-              project={project}
-              locale={locale as Locale}
-            />
-          ))}
+      {/* Specialties — two panels side by side */}
+      <section className="w-full">
+        <div className="py-14 text-center">
+          <h2 className="font-display text-3xl md:text-4xl tracking-[0.15em] uppercase text-text-primary">
+            {t('collectionsTitle')}
+          </h2>
+          <div className="mx-auto mt-3 h-px w-10 bg-primary" />
         </div>
-        <div className="mt-12 text-center px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 w-full">
+          {/* Residencial */}
           <Link
-            href={`/${locale}/projetos`}
-            className="font-body text-xs uppercase tracking-widest border border-text-primary px-8 py-3 text-text-primary transition-colors hover:bg-text-primary hover:text-background"
+            href={`/${locale}/projetos/residencial`}
+            className="group relative overflow-hidden min-h-[70vw] md:min-h-[40vw] md:max-h-[500px]"
           >
-            {t('viewAllProjects')}
+            <Image
+              src="/images/projects/apartamento-jardins/cover.jpg"
+              alt={t('residencial')}
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+            />
+            <div className="absolute inset-0 bg-black/35 transition-colors duration-300 group-hover:bg-black/50" />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="font-display text-3xl md:text-4xl font-bold tracking-[0.2em] uppercase text-white">
+                {t('residencial')}
+              </span>
+            </div>
+          </Link>
+          {/* Comercial */}
+          <Link
+            href={`/${locale}/projetos/comercial`}
+            className="group relative overflow-hidden min-h-[70vw] md:min-h-[40vw] md:max-h-[500px]"
+          >
+            <Image
+              src="/images/projects/escritorio-itaim/01.png"
+              alt={t('comercial')}
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+            />
+            <div className="absolute inset-0 bg-black/35 transition-colors duration-300 group-hover:bg-black/50" />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="font-display text-3xl md:text-4xl font-bold tracking-[0.2em] uppercase text-white">
+                {t('comercial')}
+              </span>
+            </div>
+          </Link>
+          {/* Reforma */}
+          <Link
+            href={`/${locale}/projetos/reforma`}
+            className="group relative overflow-hidden min-h-[70vw] md:min-h-[40vw] md:max-h-[500px]"
+          >
+            <Image
+              src="/images/projects/casa-higienopolis/cover.png"
+              alt={t('reforma')}
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+            />
+            <div className="absolute inset-0 bg-black/35 transition-colors duration-300 group-hover:bg-black/50" />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="font-display text-3xl md:text-4xl font-bold tracking-[0.2em] uppercase text-white">
+                {t('reforma')}
+              </span>
+            </div>
+          </Link>
+          {/* Design de Interiores */}
+          <Link
+            href={`/${locale}/projetos/design-de-interiores`}
+            className="group relative overflow-hidden min-h-[70vw] md:min-h-[40vw] md:max-h-[500px]"
+          >
+            <Image
+              src="/images/projects/casa-higienopolis/cover.png"
+              alt={t('design-de-interiores')}
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+            />
+            <div className="absolute inset-0 bg-black/35 transition-colors duration-300 group-hover:bg-black/50" />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="font-display text-3xl md:text-4xl font-bold tracking-[0.2em] uppercase text-white text-center">
+                {t('design-de-interiores')}
+              </span>
+            </div>
           </Link>
         </div>
       </section>
 
-      {/* About Teaser */}
+{/* About Teaser */}
       <section className="py-20">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <h2 className="font-display text-3xl md:text-4xl text-primary tracking-wide">
