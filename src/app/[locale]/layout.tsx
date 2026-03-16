@@ -5,7 +5,7 @@ import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, getTranslations } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import { routing } from '@/lib/i18n'
-import Navbar from '@/components/Navbar'
+import NavbarWrapper from '@/components/NavbarWrapper'
 import Footer from '@/components/Footer'
 import WhatsAppButton from '@/components/WhatsAppButton'
 import '@/app/globals.css'
@@ -50,7 +50,7 @@ export default async function LocaleLayout({
     <html lang={locale} className={`${cormorant.variable} ${inter.variable}`}>
       <body className="bg-background">
         <NextIntlClientProvider messages={messages}>
-          <Navbar />
+          <NavbarWrapper />
           <main className="fade-in">{children}</main>
           <Footer />
           <WhatsAppButton message={t('whatsappMessage')} />
