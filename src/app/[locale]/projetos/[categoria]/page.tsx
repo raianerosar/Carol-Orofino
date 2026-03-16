@@ -34,6 +34,7 @@ export default async function CategoryPage({
   if (!KNOWN_SLUGS.includes(categoria as CategorySlug)) notFound()
 
   const t = await getTranslations({ locale, namespace: 'home' })
+  const tNotFound = await getTranslations({ locale, namespace: 'notFound' })
   const images = categoryImages[categoria as CategorySlug]
 
   return (
@@ -44,7 +45,7 @@ export default async function CategoryPage({
           href={`/${locale}`}
           className="font-body text-xs uppercase tracking-widest text-text-primary/50 hover:text-primary transition-colors"
         >
-          ← Início
+          ← {tNotFound('back')}
         </Link>
         <h1 className="font-display text-4xl md:text-5xl tracking-[0.15em] uppercase text-text-primary mt-4">
           {t(categoria)}
