@@ -135,17 +135,17 @@ export const projects: Project[] = [
     featured: false,
     translations: {
       pt: {
-        title: 'Casa Higienópolis',
+        title: 'Residência Vila Nova',
         description:
           'Reforma completa de residência dos anos 1960, respeitando a arquitetura original e incorporando conforto contemporâneo.',
       },
       en: {
-        title: 'Higienópolis House',
+        title: 'Vila Nova Residence',
         description:
           "Complete renovation of a 1960s residence, respecting the original architecture while incorporating contemporary comfort.",
       },
       es: {
-        title: 'Casa Higienópolis',
+        title: 'Residencia Vila Nova',
         description:
           'Reforma completa de residencia de los años 1960, respetando la arquitectura original e incorporando comodidad contemporánea.',
       },
