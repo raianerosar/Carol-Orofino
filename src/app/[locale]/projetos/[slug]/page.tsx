@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { getTranslations } from 'next-intl/server'
 import { getProjectBySlug, getAllSlugs } from '@/data/projects'
-import { categoryImages, KNOWN_SLUGS, type CategorySlug } from '@/data/categories'
+import { categoryImages, categoryHeroImages, KNOWN_SLUGS, type CategorySlug } from '@/data/categories'
 import { routing, type Locale } from '@/lib/i18n'
 import CategoryGallery from '@/components/CategoryGallery'
 import ProjectGallery from '@/components/ProjectGallery'
@@ -57,22 +57,45 @@ export default async function ProjectOrCategoryPage({
     const t = await getTranslations({ locale, namespace: 'home' })
     const tNotFound = await getTranslations({ locale, namespace: 'notFound' })
     const images = categoryImages[slug as CategorySlug]
+    const hero = categoryHeroImages[slug as CategorySlug]
 
     return (
-      <div className="pt-24 pb-16">
-        <div className="text-center mb-10 px-6">
+      <div className="pb-16">
+        {/* Hero with floating card */}
+        <div className="relative h-[70vh] w-full overflow-hidden">
+          <Image
+            src={hero.src}
+            alt={hero.alt[locale as Locale]}
+            fill
+            priority
+            className="object-cover"
+          />
+          {/* Dark gradient at bottom */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+
+          {/* Back link top-left */}
           <Link
             href={`/${locale}`}
-            className="font-body text-xs uppercase tracking-widest text-text-primary/50 hover:text-primary transition-colors"
+            className="absolute top-6 left-6 font-body text-xs uppercase tracking-widest text-white/80 hover:text-white transition-colors"
           >
             ← {tNotFound('back')}
           </Link>
-          <h1 className="font-display text-4xl md:text-5xl tracking-[0.15em] uppercase text-text-primary mt-4">
-            {t(slug)}
-          </h1>
-          <div className="mx-auto mt-3 h-px w-10 bg-primary" />
+
+          {/* Floating card at bottom */}
+          <div className="absolute bottom-0 left-4 right-4 md:left-8 md:right-8 bg-background/90 backdrop-blur-sm rounded-t-2xl px-8 py-6 text-center">
+            <p className="font-body text-xs uppercase tracking-[0.2em] text-primary mb-2">
+              Carol Orofino
+            </p>
+            <h1 className="font-display text-3xl md:text-4xl tracking-wide text-text-primary">
+              {t(slug)}
+            </h1>
+          </div>
         </div>
-        <CategoryGallery images={images} locale={locale as Locale} />
+
+        {/* Gallery */}
+        <div className="mt-10">
+          <CategoryGallery images={images} locale={locale as Locale} />
+        </div>
       </div>
     )
   }

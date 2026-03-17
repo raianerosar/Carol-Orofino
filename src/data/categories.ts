@@ -19,6 +19,27 @@ export const KNOWN_SLUGS: readonly CategorySlug[] = [
   'design-de-interiores',
 ]
 
+// Hero image shown at the top of each subcategory page.
+// Replace placeholder paths with real images when provided by client.
+export const categoryHeroImages: Record<CategorySlug, CategoryImage> = {
+  residencial: {
+    src: '/images/categories/residencial-hero.jpg',
+    alt: { pt: 'Projeto residencial', en: 'Residential project', es: 'Proyecto residencial' },
+  },
+  comercial: {
+    src: '/images/categories/comercial-hero.jpg',
+    alt: { pt: 'Projeto comercial', en: 'Commercial project', es: 'Proyecto comercial' },
+  },
+  reforma: {
+    src: '/images/categories/reforma-hero.jpg',
+    alt: { pt: 'Reforma', en: 'Renovation', es: 'Reforma' },
+  },
+  'design-de-interiores': {
+    src: '/images/categories/design-interiores-hero.jpg',
+    alt: { pt: 'Design de interiores', en: 'Interior design', es: 'Diseño de interiores' },
+  },
+}
+
 // Each entry has EXACTLY 2 images — enforced by the tuple type [CategoryImage, CategoryImage].
 // Replace placeholder paths and alt texts with real content when provided by client.
 export const categoryImages: Record<CategorySlug, [CategoryImage, CategoryImage]> = {
