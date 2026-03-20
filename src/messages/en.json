@@ -4,6 +4,8 @@
     "projects": "Delivered Projects",
     "about": "About",
     "services": "Services",
+    "projectsShort": "Projects",
+    "blog": "Journal",
     "contact": "Contact"
   },
   "home": {
@@ -17,7 +19,10 @@
     "featuredTitle": "Featured Projects",
     "aboutTitle": "Carol Orofino",
     "aboutTeaser": "I believe every space tells a story. With over 10 years of experience, I create environments that unite functionality, beauty, and identity.",
-    "aboutLink": "Learn more"
+    "aboutLink": "Learn more",
+    "blogTitle": "From the Journal",
+    "blogTeaser": "Reflections on design, references, and the art of creating spaces that endure.",
+    "blogLink": "Read articles"
   },
   "projects": {
     "title": "Delivered Projects",
@@ -53,6 +58,14 @@
     "emailLabel": "Email",
     "instagramLabel": "Instagram",
     "followOn": "Follow on Instagram"
+  },
+  "blog": {
+    "title": "Journal",
+    "subtitle": "Design, references & inspiration",
+    "minRead": "min read",
+    "readMore": "Read article",
+    "backToBlog": "Back to journal",
+    "contactCta": "Begin a conversation"
   },
   "footer": {
     "rights": "All rights reserved."

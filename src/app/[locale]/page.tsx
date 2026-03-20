@@ -3,6 +3,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { getTranslations } from 'next-intl/server'
 import type { Metadata } from 'next'
+import { posts } from '@/data/posts'
+import type { Locale } from '@/lib/i18n'
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://carolorofino.com.br'
 
@@ -155,6 +157,31 @@ export default async function HomePage({
           >
             {t('aboutLink')}
           </Link>
+        </div>
+      </section>
+
+      {/* Blog Teaser */}
+      <section className="border-t border-stone py-20">
+        <div className="mx-auto max-w-4xl px-6">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+            <div className="max-w-xl">
+              <p className="font-body text-xs uppercase tracking-widest text-dark mb-4">
+                {t('blogTitle')}
+              </p>
+              <h2 className="font-display text-3xl md:text-4xl text-primary tracking-wide mb-4">
+                {posts[0].translations[locale as Locale].title}
+              </h2>
+              <p className="font-body text-base text-dark italic leading-relaxed">
+                {posts[0].translations[locale as Locale].subtitle}
+              </p>
+            </div>
+            <Link
+              href={`/${locale}/blog/${posts[0].slug}`}
+              className="shrink-0 inline-block font-body text-xs uppercase tracking-widest text-primary border border-primary px-8 py-3 transition-colors hover:bg-primary hover:text-background"
+            >
+              {t('blogLink')}
+            </Link>
+          </div>
         </div>
       </section>
     </>

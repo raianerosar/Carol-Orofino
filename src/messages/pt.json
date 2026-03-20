@@ -4,6 +4,8 @@
     "projects": "Projetos Entregues",
     "about": "Sobre",
     "services": "Serviços",
+    "projectsShort": "Projetos",
+    "blog": "Blog",
     "contact": "Contato"
   },
   "home": {
@@ -17,7 +19,10 @@
     "featuredTitle": "Projetos em Destaque",
     "aboutTitle": "Carol Orofino",
     "aboutTeaser": "Acredito que cada espaço conta uma história. Com mais de 10 anos de experiência, crio ambientes que unem funcionalidade, beleza e identidade.",
-    "aboutLink": "Conheça mais"
+    "aboutLink": "Conheça mais",
+    "blogTitle": "Do Blog",
+    "blogTeaser": "Reflexões sobre design, referências e a arte de criar espaços que duram.",
+    "blogLink": "Ler artigos"
   },
   "projects": {
     "title": "Projetos Entregues",
@@ -53,6 +58,14 @@
     "emailLabel": "E-mail",
     "instagramLabel": "Instagram",
     "followOn": "Siga no Instagram"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Design, referências e inspiração",
+    "minRead": "min de leitura",
+    "readMore": "Ler artigo",
+    "backToBlog": "Voltar ao blog",
+    "contactCta": "Iniciar uma conversa"
   },
   "footer": {
     "rights": "Todos os direitos reservados."
