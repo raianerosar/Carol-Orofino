@@ -4,13 +4,12 @@ import { posts } from '@/data/posts'
 import type { Locale } from '@/lib/i18n'
 
 interface BlogSidebarProps {
-  locale: string
+  locale: Locale
   currentSlug?: string
 }
 
 export default async function BlogSidebar({ locale, currentSlug }: BlogSidebarProps) {
   const t = await getTranslations({ locale, namespace: 'blog' })
-  const lang = locale as Locale
 
   // Highlights: sort descending by date, exclude current post, take first 2
   const highlights = [...posts]
@@ -22,7 +21,7 @@ export default async function BlogSidebar({ locale, currentSlug }: BlogSidebarPr
   const categories = [...new Set(posts.map((p) => p.category))].sort()
 
   const localeCode =
-    lang === 'pt' ? 'pt-BR' : lang === 'es' ? 'es-ES' : 'en-US'
+    locale === 'pt' ? 'pt-BR' : locale === 'es' ? 'es-ES' : 'en-US'
 
   return (
     <aside className="flex flex-col gap-10">
@@ -38,7 +37,7 @@ export default async function BlogSidebar({ locale, currentSlug }: BlogSidebarPr
                 href={`/${locale}/blog/${post.slug}`}
                 className="font-body text-sm text-dark hover:text-primary transition-colors leading-snug"
               >
-                {post.translations[lang].title}
+                {post.translations[locale].title}
               </Link>
               <p className="font-body text-xs text-sage mt-1">
                 {new Date(post.date).toLocaleDateString(localeCode, {
@@ -61,7 +60,7 @@ export default async function BlogSidebar({ locale, currentSlug }: BlogSidebarPr
           {categories.map((cat) => (
             <Link
               key={cat}
-              href={`/${locale}/blog?category=${cat}`}
+              href={`/${locale}/blog?category=${encodeURIComponent(cat)}`}
               className="font-body text-sm text-dark hover:text-primary transition-colors"
             >
               {cat}
