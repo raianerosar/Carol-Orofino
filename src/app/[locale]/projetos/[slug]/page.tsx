@@ -110,71 +110,69 @@ export default async function ProjectOrCategoryPage({
     if (ALTERNATING_SLUGS.includes(slug as CategorySlug)) {
       const categoryProjects = getProjectsByCategory(slug as CategorySlug)
 
-      // Chunk into pairs — data is guaranteed to always have an even number of projects
-      const pairs: Array<[typeof categoryProjects[0], typeof categoryProjects[0]]> = []
-      for (let i = 0; i < categoryProjects.length; i += 2) {
-        if (categoryProjects[i + 1]) {
-          pairs.push([categoryProjects[i], categoryProjects[i + 1]])
-        }
-      }
-
       return (
         <div className="pb-16">
           {heroJSX}
           <div className="mt-16 px-4 md:px-6">
-            {pairs.map((pair) => (
-              <div key={pair[0].slug} className="flex flex-col md:flex-row gap-6 mb-12">
+            {Array.from({ length: Math.ceil(categoryProjects.length / 2) }, (_, rowIndex) => {
+              const left = categoryProjects[rowIndex * 2]
+              const right = categoryProjects[rowIndex * 2 + 1]
+              return (
+                <div key={left.slug} className="flex flex-col md:flex-row gap-6 mb-12">
 
-                {/* Left card — image left, text right */}
-                <div className="flex-1 flex flex-col md:flex-row">
-                  <div className="relative w-full md:w-[55%] aspect-[4/3] overflow-hidden flex-shrink-0">
-                    <Image
-                      src={pair[0].coverImage}
-                      alt={pair[0].coverImageAlt[locale as Locale]}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 27vw"
-                      className="object-cover"
-                    />
+                  {/* Left card — image left, text right */}
+                  <div className="flex-1 flex flex-col md:flex-row">
+                    <div className="relative w-full md:w-[55%] aspect-[4/3] overflow-hidden flex-shrink-0">
+                      <Image
+                        src={left.coverImage}
+                        alt={left.coverImageAlt[locale as Locale]}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 27vw"
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="flex-1 flex flex-col justify-center px-4 md:px-6 py-6 md:py-0">
+                      <p className="font-body text-xs uppercase tracking-widest text-primary mb-2">
+                        {left.location} · {left.year}
+                      </p>
+                      <h2 className="font-display text-2xl md:text-3xl text-text-primary tracking-wide mb-3">
+                        {left.translations[locale as Locale].title}
+                      </h2>
+                      <p className="font-body text-sm text-text-primary/80 leading-relaxed">
+                        {left.translations[locale as Locale].description}
+                      </p>
+                    </div>
                   </div>
-                  <div className="flex-1 flex flex-col justify-center px-4 md:px-6 py-6 md:py-0">
-                    <p className="font-body text-xs uppercase tracking-widest text-primary mb-2">
-                      {pair[0].location} · {pair[0].year}
-                    </p>
-                    <h2 className="font-display text-2xl md:text-3xl text-text-primary tracking-wide mb-3">
-                      {pair[0].translations[locale as Locale].title}
-                    </h2>
-                    <p className="font-body text-sm text-text-primary/80 leading-relaxed">
-                      {pair[0].translations[locale as Locale].description}
-                    </p>
-                  </div>
+
+                  {/* Right card — text left, image right (only when pair exists) */}
+                  {right && (
+                    <div className="flex-1 flex flex-col md:flex-row-reverse">
+                      <div className="relative w-full md:w-[55%] aspect-[4/3] overflow-hidden flex-shrink-0">
+                        <Image
+                          src={right.coverImage}
+                          alt={right.coverImageAlt[locale as Locale]}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 27vw"
+                          className="object-cover"
+                        />
+                      </div>
+                      <div className="flex-1 flex flex-col justify-center px-4 md:px-6 py-6 md:py-0">
+                        <p className="font-body text-xs uppercase tracking-widest text-primary mb-2">
+                          {right.location} · {right.year}
+                        </p>
+                        <h2 className="font-display text-2xl md:text-3xl text-text-primary tracking-wide mb-3">
+                          {right.translations[locale as Locale].title}
+                        </h2>
+                        <p className="font-body text-sm text-text-primary/80 leading-relaxed">
+                          {right.translations[locale as Locale].description}
+                        </p>
+                      </div>
+                    </div>
+                  )}
+
                 </div>
-
-                {/* Right card — text left, image right */}
-                <div className="flex-1 flex flex-col md:flex-row-reverse">
-                  <div className="relative w-full md:w-[55%] aspect-[4/3] overflow-hidden flex-shrink-0">
-                    <Image
-                      src={pair[1].coverImage}
-                      alt={pair[1].coverImageAlt[locale as Locale]}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 27vw"
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="flex-1 flex flex-col justify-center px-4 md:px-6 py-6 md:py-0">
-                    <p className="font-body text-xs uppercase tracking-widest text-primary mb-2">
-                      {pair[1].location} · {pair[1].year}
-                    </p>
-                    <h2 className="font-display text-2xl md:text-3xl text-text-primary tracking-wide mb-3">
-                      {pair[1].translations[locale as Locale].title}
-                    </h2>
-                    <p className="font-body text-sm text-text-primary/80 leading-relaxed">
-                      {pair[1].translations[locale as Locale].description}
-                    </p>
-                  </div>
-                </div>
-
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       )
