@@ -66,7 +66,11 @@
     "minRead": "min de leitura",
     "readMore": "Ler artigo",
     "backToBlog": "Voltar ao blog",
-    "contactCta": "Iniciar uma conversa"
+    "contactCta": "Iniciar uma conversa",
+    "sidebarHighlights": "Destaques",
+    "sidebarCategories": "Categorias",
+    "allCategories": "Todos",
+    "noPosts": "Nenhum artigo nesta categoria."
   },
   "footer": {
     "rights": "Todos os direitos reservados."
