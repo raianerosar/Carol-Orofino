@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
 import { getTranslations } from 'next-intl/server'
-import { getProjectBySlug, getAllSlugs } from '@/data/projects'
+import { getProjectBySlug, getAllSlugs, getProjectsByCategory } from '@/data/projects'
 import { categoryImages, categoryHeroImages, KNOWN_SLUGS, type CategorySlug } from '@/data/categories'
 import { routing, type Locale } from '@/lib/i18n'
 import CategoryGallery from '@/components/CategoryGallery'
@@ -21,6 +21,13 @@ export async function generateStaticParams() {
 }
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://carolorofino.com.br'
+
+const ALTERNATING_SLUGS: CategorySlug[] = [
+  'residencial',
+  'comercial',
+  'design-de-interiores',
+  'projetos',
+]
 
 export async function generateMetadata({
   params,
@@ -56,57 +63,102 @@ export default async function ProjectOrCategoryPage({
   if (KNOWN_SLUGS.includes(slug as CategorySlug)) {
     const t = await getTranslations({ locale, namespace: 'home' })
     const tNotFound = await getTranslations({ locale, namespace: 'notFound' })
-    const images = categoryImages[slug as CategorySlug]
     const hero = categoryHeroImages[slug as CategorySlug]
 
-    return (
-      <div className="pb-16">
-        {/* Hero wrapper — card overflows below the image */}
-        <div className="relative">
-          {/* Image container — overflow-hidden only here so card isn't clipped */}
-          <div className="relative aspect-[9/16] md:h-auto md:aspect-[21/9] w-full overflow-hidden">
-            {/* Mobile image */}
-            {hero.mobileSrc && (
-              <Image
-                src={hero.mobileSrc}
-                alt={hero.alt[locale as Locale]}
-                fill
-                priority
-                className="object-cover md:hidden"
-              />
-            )}
-            {/* Desktop image */}
+    // Hero JSX — shared for all category slugs
+    const heroJSX = (
+      <div className="relative">
+        {/* Image container */}
+        <div className="relative aspect-[9/16] md:h-auto md:aspect-[21/9] w-full overflow-hidden">
+          {hero.mobileSrc && (
             <Image
-              src={hero.src}
+              src={hero.mobileSrc}
               alt={hero.alt[locale as Locale]}
               fill
               priority
-              className={`object-cover${hero.mobileSrc ? ' hidden md:block' : ''}`}
+              className="object-cover md:hidden"
             />
-            {/* Gradient at bottom */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+          )}
+          <Image
+            src={hero.src}
+            alt={hero.alt[locale as Locale]}
+            fill
+            priority
+            className={`object-cover${hero.mobileSrc ? ' hidden md:block' : ''}`}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+          <Link
+            href={`/${locale}`}
+            className="absolute top-20 left-6 font-body text-xs uppercase tracking-widest text-white/80 hover:text-white transition-colors"
+          >
+            ← {tNotFound('back')}
+          </Link>
+        </div>
+        {/* Floating card */}
+        <div className="relative mx-4 md:mx-8 -mt-12 bg-background rounded-2xl px-8 py-7 text-center shadow-sm">
+          <p className="font-body text-xs uppercase tracking-[0.2em] text-primary mb-2">
+            Carol Orofino
+          </p>
+          <h1 className="font-display text-3xl md:text-4xl tracking-wide text-text-primary">
+            {t(slug)}
+          </h1>
+        </div>
+      </div>
+    )
 
-            {/* Back link — offset for fixed navbar height */}
-            <Link
-              href={`/${locale}`}
-              className="absolute top-20 left-6 font-body text-xs uppercase tracking-widest text-white/80 hover:text-white transition-colors"
-            >
-              ← {tNotFound('back')}
-            </Link>
-          </div>
+    // Alternating sections for residencial, comercial, design-de-interiores, projetos
+    if (ALTERNATING_SLUGS.includes(slug as CategorySlug)) {
+      const categoryProjects = getProjectsByCategory(slug as CategorySlug)
 
-          {/* Floating card — overlaps below image */}
-          <div className="relative mx-4 md:mx-8 -mt-12 bg-background rounded-2xl px-8 py-7 text-center shadow-sm">
-            <p className="font-body text-xs uppercase tracking-[0.2em] text-primary mb-2">
-              Carol Orofino
-            </p>
-            <h1 className="font-display text-3xl md:text-4xl tracking-wide text-text-primary">
-              {t(slug)}
-            </h1>
+      return (
+        <div className="pb-16">
+          {heroJSX}
+          <div className="mt-16">
+            {categoryProjects.map((project, index) => {
+              const translation = project.translations[locale as Locale]
+              const isImageLeft = index % 2 === 0
+
+              return (
+                <div
+                  key={project.slug}
+                  className={`flex flex-col md:flex-row items-stretch mb-16 md:mb-24${isImageLeft ? '' : ' md:flex-row-reverse'}`}
+                >
+                  {/* Image column — 55% desktop, full width mobile */}
+                  <div className="relative w-full md:w-[55%] aspect-[4/3] overflow-hidden flex-shrink-0">
+                    <Image
+                      src={project.coverImage}
+                      alt={project.coverImageAlt[locale as Locale]}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 55vw"
+                      className="object-cover"
+                    />
+                  </div>
+
+                  {/* Text column — 45% desktop */}
+                  <div className="w-full md:w-[45%] flex flex-col justify-center px-6 md:px-12 py-8 md:py-0">
+                    <p className="font-body text-xs uppercase tracking-widest text-primary mb-3">
+                      {project.location} · {project.year}
+                    </p>
+                    <h2 className="font-display text-3xl md:text-4xl text-text-primary tracking-wide mb-4">
+                      {translation.title}
+                    </h2>
+                    <p className="font-body text-base text-text-primary/80 leading-relaxed">
+                      {translation.description}
+                    </p>
+                  </div>
+                </div>
+              )
+            })}
           </div>
         </div>
+      )
+    }
 
-        {/* Gallery */}
+    // reforma — keep existing CategoryGallery
+    const images = categoryImages[slug as CategorySlug]
+    return (
+      <div className="pb-16">
+        {heroJSX}
         <div className="mt-10">
           <CategoryGallery images={images} locale={locale as Locale} />
         </div>
