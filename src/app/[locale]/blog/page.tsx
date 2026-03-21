@@ -86,7 +86,7 @@ export default async function BlogPage({
                 return (
                   <article
                     key={post.slug}
-                    className="border-t border-stone pt-10 pb-10 group"
+                    className="border-t border-stone pt-10 pb-10"
                   >
                     <p className="font-body text-xs text-sage uppercase tracking-widest mb-4">
                       {post.category}

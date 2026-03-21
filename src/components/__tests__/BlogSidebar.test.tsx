@@ -20,6 +20,7 @@ jest.mock('@/data/posts', () => ({
     { slug: 'post-a', date: '2025-03-01', readTime: 5, category: 'Luxo', translations: { pt: { title: 'Post A' }, en: { title: 'Post A EN' }, es: { title: 'Post A ES' } } },
     { slug: 'post-b', date: '2025-03-20', readTime: 4, category: 'Minimalismo', translations: { pt: { title: 'Post B' }, en: { title: 'Post B EN' }, es: { title: 'Post B ES' } } },
     { slug: 'post-c', date: '2025-03-10', readTime: 6, category: 'Luxo', translations: { pt: { title: 'Post C' }, en: { title: 'Post C EN' }, es: { title: 'Post C ES' } } },
+    { slug: 'post-d', date: '2025-02-15', readTime: 3, category: 'Design Escandinavo', translations: { pt: { title: 'Post D' }, en: { title: 'Post D EN' }, es: { title: 'Post D ES' } } },
   ],
 }))
 
@@ -46,11 +47,11 @@ describe('BlogSidebar', () => {
     const ui = await BlogSidebar({ locale: 'pt' })
     render(ui)
     const links = screen.getAllByRole('link').filter(l =>
-      ['Luxo', 'Minimalismo'].includes(l.textContent ?? '')
+      ['Design Escandinavo', 'Luxo', 'Minimalismo'].includes(l.textContent ?? '')
     )
-    // Luxo appears once (deduplicated), Minimalismo appears once
+    // Design Escandinavo, Luxo appears once (deduplicated), Minimalismo appears once
     const categoryTexts = links.map(l => l.textContent)
-    expect(categoryTexts).toEqual(['Luxo', 'Minimalismo']) // alphabetical
+    expect(categoryTexts).toEqual(['Design Escandinavo', 'Luxo', 'Minimalismo']) // alphabetical
   })
 
   it('links highlights to the correct post URL', async () => {
@@ -65,5 +66,12 @@ describe('BlogSidebar', () => {
     render(ui)
     const luxoLink = screen.getByRole('link', { name: 'Luxo' })
     expect(luxoLink).toHaveAttribute('href', '/pt/blog?category=Luxo')
+  })
+
+  it('encodes category with spaces in the link href', async () => {
+    const ui = await BlogSidebar({ locale: 'pt' })
+    render(ui)
+    const designLink = screen.getByRole('link', { name: 'Design Escandinavo' })
+    expect(designLink).toHaveAttribute('href', '/pt/blog?category=Design%20Escandinavo')
   })
 })
