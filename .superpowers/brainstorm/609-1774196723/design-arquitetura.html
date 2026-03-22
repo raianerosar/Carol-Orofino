@@ -1,0 +1,45 @@
+<h2>Design — Arquitetura</h2>
+<p class="subtitle">Como as peças se encaixam</p>
+
+<div class="mockup">
+  <div class="mockup-header">Fluxo de dados</div>
+  <div class="mockup-body" style="font-family:monospace;font-size:0.85em;line-height:2">
+    <div style="display:flex;flex-direction:column;gap:12px;padding:16px">
+      <div style="background:#f5f0eb;border:1px solid #d4c9bc;padding:12px;border-radius:4px">
+        <strong>🌐 /[locale]/questionario/page.tsx</strong> (Server Component)<br>
+        <span style="color:#888;font-size:0.9em">Renderiza o wizard, passa traduções via next-intl</span>
+      </div>
+      <div style="text-align:center;color:#888">↓</div>
+      <div style="background:#f5f0eb;border:1px solid #d4c9bc;padding:12px;border-radius:4px">
+        <strong>🧩 QuestionnaireWizard.tsx</strong> (Client Component)<br>
+        <span style="color:#888;font-size:0.9em">Gerencia estado das 4 etapas + barra de progresso</span>
+      </div>
+      <div style="text-align:center;color:#888">↓ (ao clicar em Enviar)</div>
+      <div style="background:#f5f0eb;border:1px solid #d4c9bc;padding:12px;border-radius:4px">
+        <strong>⚡ submitQuestionnaire()</strong> (Server Action)<br>
+        <span style="color:#888;font-size:0.9em">1. Faz upload dos arquivos → Vercel Blob<br>2. Envia e-mail com resumo → Resend → carol@carolorofino.com.br</span>
+      </div>
+      <div style="text-align:center;color:#888">↓</div>
+      <div style="background:#e8f0e8;border:1px solid #b8d4b8;padding:12px;border-radius:4px">
+        <strong>✅ Tela de sucesso</strong><br>
+        <span style="color:#888;font-size:0.9em">"Obrigado! Retornaremos em breve."</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="margin-top:24px">
+  <h3>Arquivos novos</h3>
+  <ul style="font-family:monospace;font-size:0.85em;line-height:2;color:#555">
+    <li>src/app/[locale]/questionario/<strong>page.tsx</strong></li>
+    <li>src/components/questionnaire/<strong>QuestionnaireWizard.tsx</strong></li>
+    <li>src/components/questionnaire/<strong>Step1Identity.tsx</strong></li>
+    <li>src/components/questionnaire/<strong>Step2Environment.tsx</strong></li>
+    <li>src/components/questionnaire/<strong>Step3Style.tsx</strong></li>
+    <li>src/components/questionnaire/<strong>Step4Scope.tsx</strong></li>
+    <li>src/actions/<strong>submitQuestionnaire.ts</strong></li>
+    <li>messages/{pt,en,es}.json → chaves <em>questionnaire.*</em></li>
+  </ul>
+</div>
+
+<p class="subtitle" style="margin-top:16px">Isso faz sentido? Alguma peça que deve mudar?</p>

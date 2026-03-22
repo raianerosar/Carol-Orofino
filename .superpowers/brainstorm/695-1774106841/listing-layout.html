@@ -1,0 +1,69 @@
+<h2>Layout da página de listagem do blog</h2>
+<p class="subtitle">Como os posts devem aparecer na lista?</p>
+
+<div class="cards">
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#e0cfb3;padding:20px;font-family:Georgia,serif;">
+      <div style="max-width:520px;margin:0 auto;">
+        <div style="border-bottom:1px solid #c0af9b;padding-bottom:12px;margin-bottom:16px;">
+          <div style="font-size:9px;color:#7c777d;text-transform:uppercase;letter-spacing:2px;margin-bottom:6px;">18 Mar 2025 · 5 min</div>
+          <div style="font-size:18px;color:#86725a;font-family:Georgia,serif;margin-bottom:6px;">A Nova Linguagem do Luxo</div>
+          <div style="font-size:11px;color:#7c777d;font-style:italic;">O verdadeiro luxo nunca foi barulhento. Sempre foi preciso.</div>
+        </div>
+        <div style="border-bottom:1px solid #c0af9b;padding-bottom:12px;margin-bottom:16px;">
+          <div style="font-size:9px;color:#7c777d;text-transform:uppercase;letter-spacing:2px;margin-bottom:6px;">10 Mar 2025 · 5 min</div>
+          <div style="font-size:18px;color:#86725a;font-family:Georgia,serif;margin-bottom:6px;">A Disciplina da Subtração</div>
+          <div style="font-size:11px;color:#7c777d;font-style:italic;">Minimalismo não é vazio. É a coragem de guardar apenas o que importa.</div>
+        </div>
+        <div style="border-bottom:1px solid #c0af9b;padding-bottom:12px;">
+          <div style="font-size:9px;color:#7c777d;text-transform:uppercase;letter-spacing:2px;margin-bottom:6px;">20 Mar 2025 · 6 min</div>
+          <div style="font-size:18px;color:#86725a;font-family:Georgia,serif;margin-bottom:6px;">Onde o Silêncio Tem Forma</div>
+          <div style="font-size:11px;color:#7c777d;font-style:italic;">Sobre o luxo de dizer menos — e significar tudo.</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — Uma coluna, lista editorial</h3>
+      <p>Igual ao layout atual: posts em coluna única, separados por linha. Elegante, leitura focada. Sem sidebar.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#e0cfb3;padding:16px;font-family:Georgia,serif;">
+      <div style="display:flex;gap:16px;max-width:560px;margin:0 auto;">
+        <div style="flex:1;min-width:0;">
+          <div style="background:#d5d0cc;height:10px;border-radius:2px;margin-bottom:12px;"></div>
+          <div style="border-bottom:1px solid #c0af9b;padding-bottom:10px;margin-bottom:10px;">
+            <div style="font-size:8px;color:#7c777d;text-transform:uppercase;letter-spacing:2px;margin-bottom:4px;">LUXO · 5 min</div>
+            <div style="font-size:14px;color:#86725a;font-family:Georgia,serif;margin-bottom:4px;">A Nova Linguagem do Luxo</div>
+            <div style="font-size:9px;color:#7c777d;font-style:italic;">O verdadeiro luxo nunca foi barulhento.</div>
+          </div>
+          <div style="border-bottom:1px solid #c0af9b;padding-bottom:10px;margin-bottom:10px;">
+            <div style="font-size:8px;color:#7c777d;text-transform:uppercase;letter-spacing:2px;margin-bottom:4px;">MINIMALISMO · 5 min</div>
+            <div style="font-size:14px;color:#86725a;font-family:Georgia,serif;margin-bottom:4px;">A Disciplina da Subtração</div>
+            <div style="font-size:9px;color:#7c777d;font-style:italic;">Minimalismo não é vazio.</div>
+          </div>
+          <div>
+            <div style="font-size:8px;color:#7c777d;text-transform:uppercase;letter-spacing:2px;margin-bottom:4px;">DESIGN · 6 min</div>
+            <div style="font-size:14px;color:#86725a;font-family:Georgia,serif;margin-bottom:4px;">Onde o Silêncio Tem Forma</div>
+            <div style="font-size:9px;color:#7c777d;font-style:italic;">Sobre o luxo de dizer menos.</div>
+          </div>
+        </div>
+        <div style="width:110px;flex-shrink:0;">
+          <div style="background:#d5d0cc;height:10px;border-radius:2px;margin-bottom:10px;"></div>
+          <div style="font-size:8px;color:#86725a;text-transform:uppercase;letter-spacing:2px;margin-bottom:6px;">Destaques</div>
+          <div style="font-size:8px;color:#7c777d;border-bottom:1px solid #d5d0cc;padding-bottom:6px;margin-bottom:6px;">A Nova Linguagem do Luxo</div>
+          <div style="font-size:8px;color:#7c777d;border-bottom:1px solid #d5d0cc;padding-bottom:6px;margin-bottom:10px;">A Disciplina da Subtração</div>
+          <div style="font-size:8px;color:#86725a;text-transform:uppercase;letter-spacing:2px;margin-bottom:6px;">Categorias</div>
+          <div style="font-size:8px;color:#7c777d;margin-bottom:4px;">Luxo</div>
+          <div style="font-size:8px;color:#7c777d;margin-bottom:4px;">Minimalismo</div>
+          <div style="font-size:8px;color:#7c777d;">Design</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Duas colunas: lista + sidebar</h3>
+      <p>Lista de posts à esquerda + sidebar fixa à direita com destaques e categorias. Igual ao layout de referência, mas aplicado também à listagem.</p>
+    </div>
+  </div>
+</div>

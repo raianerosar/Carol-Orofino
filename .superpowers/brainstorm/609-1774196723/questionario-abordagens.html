@@ -1,0 +1,43 @@
+<h2>Como implementar o questionário?</h2>
+<p class="subtitle">3 abordagens possíveis — com trade-offs</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A ⭐</div>
+    <div class="content">
+      <h3>Server Actions + Resend + Vercel Blob</h3>
+      <p><strong>Recomendado.</strong> Wizard client-side com React state. Cada etapa é um componente. No envio, um Server Action chama Resend (e-mail) e Vercel Blob (uploads). Tudo dentro do Next.js, sem nova API. Idiomático com o resto do projeto.</p>
+      <ul style="margin-top:8px;font-size:0.85em;color:#888">
+        <li>✅ Zero backend extra — usa o que já existe</li>
+        <li>✅ Upload seguro (assinado pelo servidor)</li>
+        <li>✅ Fácil de adicionar i18n via next-intl</li>
+        <li>⚠️ Requer conta Resend e Vercel Blob</li>
+      </ul>
+    </div>
+  </div>
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>React Hook Form + API Route</h3>
+      <p>Wizard com react-hook-form para validação robusta. Rota <code>/api/questionnaire</code> separada para lidar com o envio. Mais boilerplate mas mais controle granular por campo.</p>
+      <ul style="margin-top:8px;font-size:0.85em;color:#888">
+        <li>✅ Validação de formulário muito poderosa</li>
+        <li>✅ Melhor para formulários com lógica condicional complexa</li>
+        <li>⚠️ Mais arquivos, mais setup</li>
+      </ul>
+    </div>
+  </div>
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Typeform / Tally embed</h3>
+      <p>Ferramenta externa embutida via iframe. Zero desenvolvimento para os campos. Layout bonito por padrão. Porém fora do controle do design do site.</p>
+      <ul style="margin-top:8px;font-size:0.85em;color:#888">
+        <li>✅ Rápido de colocar no ar</li>
+        <li>❌ Visual não combina com o site</li>
+        <li>❌ Custo mensal para features avançadas</li>
+        <li>❌ Dados dos clientes em terceiro</li>
+      </ul>
+    </div>
+  </div>
+</div>

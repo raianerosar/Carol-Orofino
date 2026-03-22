@@ -106,70 +106,45 @@ export default async function ProjectOrCategoryPage({
       </div>
     )
 
-    // Alternating sections for residencial, comercial, design-de-interiores, projetos
+    // residencial, comercial, design-de-interiores — full-width alternating rows, two images stacked
     if (ALTERNATING_SLUGS.includes(slug as CategorySlug)) {
-      const categoryProjects = getProjectsByCategory(slug as CategorySlug)
+      const allCategoryProjects = getProjectsByCategory(slug as CategorySlug)
+      const categoryProjects = slug === 'projetos' ? allCategoryProjects.slice(0, 2) : allCategoryProjects
 
       return (
         <div className="pb-16">
           {heroJSX}
-          <div className="mt-16 px-4 md:px-6">
-            {Array.from({ length: Math.ceil(categoryProjects.length / 2) }, (_, rowIndex) => {
-              const left = categoryProjects[rowIndex * 2]
-              const right = categoryProjects[rowIndex * 2 + 1]
+          <div className="mt-16">
+            {categoryProjects.map((project, index) => {
+              const reversed = index % 2 === 1
               return (
-                <div key={left.slug} className="flex flex-col md:flex-row gap-6 mb-12">
-
-                  {/* Left card — image left, text right */}
-                  <div className="flex-1 flex flex-col md:flex-row">
-                    <div className="relative w-full md:w-[55%] aspect-[4/3] overflow-hidden flex-shrink-0">
-                      <Image
-                        src={left.coverImage}
-                        alt={left.coverImageAlt[locale as Locale]}
-                        fill
-                        sizes="(max-width: 768px) 100vw, 27vw"
-                        className="object-cover"
-                      />
-                    </div>
-                    <div className="flex-1 flex flex-col justify-center px-4 md:px-6 py-6 md:py-0">
-                      <p className="font-body text-xs uppercase tracking-widest text-primary mb-2">
-                        {left.location} · {left.year}
-                      </p>
-                      <h2 className="font-display text-2xl md:text-3xl text-text-primary tracking-wide mb-3">
-                        {left.translations[locale as Locale].title}
-                      </h2>
-                      <p className="font-body text-sm text-text-primary/80 leading-relaxed">
-                        {left.translations[locale as Locale].description}
-                      </p>
-                    </div>
+                <div
+                  key={project.slug}
+                  className={`flex flex-col ${reversed ? 'md:flex-row-reverse' : 'md:flex-row'} mb-24`}
+                >
+                  {/* Image column */}
+                  <div className="relative w-full md:w-[60%] aspect-video flex-shrink-0 overflow-hidden">
+                    <Image
+                      src={project.coverImage}
+                      alt={project.coverImageAlt[locale as Locale]}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 60vw"
+                      className="object-cover"
+                    />
                   </div>
 
-                  {/* Right card — text left, image right (only when pair exists) */}
-                  {right && (
-                    <div className="flex-1 flex flex-col md:flex-row-reverse">
-                      <div className="relative w-full md:w-[55%] aspect-[4/3] overflow-hidden flex-shrink-0">
-                        <Image
-                          src={right.coverImage}
-                          alt={right.coverImageAlt[locale as Locale]}
-                          fill
-                          sizes="(max-width: 768px) 100vw, 27vw"
-                          className="object-cover"
-                        />
-                      </div>
-                      <div className="flex-1 flex flex-col justify-center px-4 md:px-6 py-6 md:py-0">
-                        <p className="font-body text-xs uppercase tracking-widest text-primary mb-2">
-                          {right.location} · {right.year}
-                        </p>
-                        <h2 className="font-display text-2xl md:text-3xl text-text-primary tracking-wide mb-3">
-                          {right.translations[locale as Locale].title}
-                        </h2>
-                        <p className="font-body text-sm text-text-primary/80 leading-relaxed">
-                          {right.translations[locale as Locale].description}
-                        </p>
-                      </div>
-                    </div>
-                  )}
-
+                  {/* Text column */}
+                  <div className={`flex-1 flex flex-col justify-center py-12 md:py-0 ${reversed ? 'md:pr-16 md:pl-10 items-end text-right' : 'md:pl-16 md:pr-10 items-start text-left'} px-6`}>
+                    <p className="font-body text-xs uppercase tracking-[0.2em] text-primary mb-4">
+                      {project.location} · {project.year}
+                    </p>
+                    <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-text-primary tracking-wide mb-6 leading-tight">
+                      {project.translations[locale as Locale].title}
+                    </h2>
+                    <p className="font-body text-sm md:text-base text-text-primary/70 leading-relaxed max-w-xs">
+                      {project.translations[locale as Locale].description}
+                    </p>
+                  </div>
                 </div>
               )
             })}
