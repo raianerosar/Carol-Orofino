@@ -6,7 +6,8 @@
     "services": "Serviços",
     "projectsShort": "Projetos",
     "blog": "Blog",
-    "contact": "Contato"
+    "contact": "Contato",
+    "questionnaire": "Questionário"
   },
   "home": {
     "tagline": "Design de Interiores que transforma espaços em experiências",
@@ -58,7 +59,93 @@
     "whatsappMessage": "Olá Carol, gostaria de saber mais sobre seus serviços.",
     "emailLabel": "E-mail",
     "instagramLabel": "Instagram",
-    "followOn": "Siga no Instagram"
+    "followOn": "Siga no Instagram",
+    "questionnaireLink": "Preencher questionário de briefing"
+  },
+  "questionnaire": {
+    "title": "Questionário de Briefing",
+    "progress": "Etapa {current} de {total}",
+    "next": "Próximo",
+    "back": "Voltar",
+    "submit": "Enviar",
+    "submitting": "Enviando...",
+    "errorGeneric": "Algo deu errado. Por favor, tente novamente.",
+    "step1": {
+      "title": "Identificação e Contato",
+      "name": "Nome completo",
+      "whatsapp": "WhatsApp",
+      "email": "E-mail",
+      "namePlaceholder": "Seu nome completo",
+      "whatsappPlaceholder": "(11) 99999-0000",
+      "emailPlaceholder": "seu@email.com",
+      "nameError": "Nome obrigatório",
+      "whatsappError": "WhatsApp inválido",
+      "emailError": "E-mail inválido"
+    },
+    "step2": {
+      "title": "O Ambiente",
+      "roomType": "Qual ambiente deseja transformar?",
+      "roomTypePlaceholder": "Selecione...",
+      "roomOptions": {
+        "sala": "Sala",
+        "quarto": "Quarto",
+        "cozinha": "Cozinha",
+        "escritorio": "Escritório",
+        "consultorio": "Consultório",
+        "outro": "Outro"
+      },
+      "roomTypeError": "Selecione o tipo de ambiente",
+      "area": "Metragem aproximada (m²)",
+      "floorPlan": "Planta baixa ou croqui (opcional)",
+      "floorPlanHint": "PDF, PNG ou JPG — máx. 10MB",
+      "photos": "Fotos ou vídeos do ambiente (opcional)",
+      "photosHint": "Múltiplos arquivos — máx. 50MB no total",
+      "fileTooLarge": "Arquivo excede o tamanho máximo",
+      "fileInvalidType": "Tipo de arquivo não permitido"
+    },
+    "step3": {
+      "title": "Estilo e Referências",
+      "styles": "Qual estilo combina com você?",
+      "styleOptions": {
+        "minimalista": "Minimalista",
+        "industrial": "Industrial",
+        "escandinavo": "Escandinavo",
+        "classico": "Clássico",
+        "moderno": "Moderno"
+      },
+      "pinterest": "Link do Pinterest (opcional)",
+      "pinterestPlaceholder": "https://pinterest.com/...",
+      "mustHave": "O que não pode faltar no seu projeto?",
+      "mustHavePlaceholder": "Ex: mesa de trabalho grande, iluminação quente...",
+      "mustHaveHint": "Máx. 500 caracteres"
+    },
+    "step4": {
+      "title": "Escopo e Investimento",
+      "scopeType": "O que você busca?",
+      "scopeOptions": {
+        "consultoria": "Consultoria de cores e móveis",
+        "projeto3d": "Projeto 3D detalhado",
+        "reforma": "Reforma completa com acompanhamento"
+      },
+      "scopeTypeError": "Selecione o tipo de projeto",
+      "urgency": "Qual a sua urgência?",
+      "urgencyOptions": {
+        "imediata": "Imediata",
+        "3meses": "Daqui a 3 meses",
+        "sondando": "Apenas sondando"
+      },
+      "budget": "Faixa de investimento na execução",
+      "budgetOptions": {
+        "ate10k": "Até R$ 10.000",
+        "10a30k": "R$ 10.000 – R$ 30.000",
+        "30a80k": "R$ 30.000 – R$ 80.000",
+        "acima80k": "Acima de R$ 80.000"
+      }
+    },
+    "success": {
+      "title": "Obrigado!",
+      "message": "Recebemos seu questionário e entraremos em contato em breve."
+    }
   },
   "blog": {
     "title": "Blog",

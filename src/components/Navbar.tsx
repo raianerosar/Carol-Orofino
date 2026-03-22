@@ -44,6 +44,7 @@ export default function Navbar({ transparent = false }: NavbarProps) {
     { href: `/${locale}/servicos`, label: t('services') },
     { href: `/${locale}/blog`, label: t('blog') },
     { href: `/${locale}/contato`, label: t('contact') },
+    { href: `/${locale}/questionario`, label: t('questionnaire'), isButton: true },
   ]
 
   const navLinks = [...navLinksLeft, ...navLinksRight]
@@ -98,17 +99,31 @@ export default function Navbar({ transparent = false }: NavbarProps) {
 
           {/* Desktop: nav links right + language selector + WhatsApp */}
           <div className="hidden items-center justify-end gap-8 md:flex">
-            {navLinksRight.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`font-body text-xs uppercase tracking-widest transition-colors hover:text-primary ${
-                  isTransparentMode ? 'text-white' : 'text-text-primary'
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinksRight.map((link) =>
+              link.isButton ? (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`font-body text-xs uppercase tracking-widest px-4 py-2 border transition-colors ${
+                    isTransparentMode
+                      ? 'border-white text-white hover:bg-white hover:text-text-primary'
+                      : 'border-text-primary text-text-primary hover:bg-text-primary hover:text-background'
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`font-body text-xs uppercase tracking-widest transition-colors hover:text-primary ${
+                    isTransparentMode ? 'text-white' : 'text-text-primary'
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
             <div className="flex items-center gap-1">
               {LOCALES.map((loc, i) => (
                 <span key={loc.code} className="flex items-center">

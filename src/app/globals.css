@@ -14,7 +14,7 @@
   --color-sky:   #ccdae3;   /* cool accent surfaces */
   --color-latte: #c0af9b;   /* hover areas, warm secondary */
   --color-sage:  #95978a;   /* secondary text, captions */
-  --color-slate: #7c777d;   /* footer, dark UI labels */
+  --color-slate: #8b9b82;   /* footer, dark UI labels */
 
   /* 10% — Accent: CTAs, headings, brand */
   --color-walnut: #86725a;
@@ -25,7 +25,7 @@
   --color-primary: #86725a;      /* → walnut */
   --color-secondary: #c0af9b;    /* → latte */
   --color-neutral: #d5d0cc;      /* → stone */
-  --color-dark: #7c777d;         /* → slate */
+  --color-dark: #8b9b82;         /* → slate */
 
   /* Font families */
   --font-display: var(--font-cormorant), Georgia, serif;

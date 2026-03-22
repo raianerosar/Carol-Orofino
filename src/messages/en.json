@@ -6,7 +6,8 @@
     "services": "Services",
     "projectsShort": "Projects",
     "blog": "Journal",
-    "contact": "Contact"
+    "contact": "Contact",
+    "questionnaire": "Questionnaire"
   },
   "home": {
     "tagline": "Interior Design that transforms spaces into experiences",
@@ -58,7 +59,93 @@
     "whatsappMessage": "Hello Carol, I'd like to know more about your services.",
     "emailLabel": "Email",
     "instagramLabel": "Instagram",
-    "followOn": "Follow on Instagram"
+    "followOn": "Follow on Instagram",
+    "questionnaireLink": "Fill out the briefing questionnaire"
+  },
+  "questionnaire": {
+    "title": "Briefing Questionnaire",
+    "progress": "Step {current} of {total}",
+    "next": "Next",
+    "back": "Back",
+    "submit": "Submit",
+    "submitting": "Submitting...",
+    "errorGeneric": "Something went wrong. Please try again.",
+    "step1": {
+      "title": "Identification & Contact",
+      "name": "Full name",
+      "whatsapp": "WhatsApp",
+      "email": "Email",
+      "namePlaceholder": "Your full name",
+      "whatsappPlaceholder": "+1 (555) 000-0000",
+      "emailPlaceholder": "your@email.com",
+      "nameError": "Name is required",
+      "whatsappError": "Invalid WhatsApp number",
+      "emailError": "Invalid email"
+    },
+    "step2": {
+      "title": "The Space",
+      "roomType": "Which space would you like to transform?",
+      "roomTypePlaceholder": "Select...",
+      "roomOptions": {
+        "sala": "Living room",
+        "quarto": "Bedroom",
+        "cozinha": "Kitchen",
+        "escritorio": "Office",
+        "consultorio": "Clinic",
+        "outro": "Other"
+      },
+      "roomTypeError": "Please select a room type",
+      "area": "Approximate area (m²)",
+      "floorPlan": "Floor plan or sketch (optional)",
+      "floorPlanHint": "PDF, PNG or JPG — max 10MB",
+      "photos": "Photos or videos of the space (optional)",
+      "photosHint": "Multiple files — max 50MB total",
+      "fileTooLarge": "File exceeds maximum size",
+      "fileInvalidType": "File type not allowed"
+    },
+    "step3": {
+      "title": "Style & References",
+      "styles": "Which style suits you?",
+      "styleOptions": {
+        "minimalista": "Minimalist",
+        "industrial": "Industrial",
+        "escandinavo": "Scandinavian",
+        "classico": "Classic",
+        "moderno": "Modern"
+      },
+      "pinterest": "Pinterest link (optional)",
+      "pinterestPlaceholder": "https://pinterest.com/...",
+      "mustHave": "What must be included in your project?",
+      "mustHavePlaceholder": "E.g.: large work desk, warm lighting...",
+      "mustHaveHint": "Max 500 characters"
+    },
+    "step4": {
+      "title": "Scope & Investment",
+      "scopeType": "What are you looking for?",
+      "scopeOptions": {
+        "consultoria": "Color & furniture consultation",
+        "projeto3d": "Detailed 3D project",
+        "reforma": "Full renovation with supervision"
+      },
+      "scopeTypeError": "Please select a project type",
+      "urgency": "What is your timeline?",
+      "urgencyOptions": {
+        "imediata": "Immediate",
+        "3meses": "In 3 months",
+        "sondando": "Just exploring"
+      },
+      "budget": "Execution investment range",
+      "budgetOptions": {
+        "ate10k": "Up to R$ 10,000",
+        "10a30k": "R$ 10,000 – R$ 30,000",
+        "30a80k": "R$ 30,000 – R$ 80,000",
+        "acima80k": "Above R$ 80,000"
+      }
+    },
+    "success": {
+      "title": "Thank you!",
+      "message": "We received your questionnaire and will be in touch soon."
+    }
   },
   "blog": {
     "title": "Journal",
