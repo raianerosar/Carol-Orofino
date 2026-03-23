@@ -159,7 +159,7 @@ export default async function BlogPostPage({
                         <table className="w-full">
                           <tbody>
                             {section.table.map((row, i) => (
-                              <tr key={i} className={i < section.table.length - 1 ? 'border-b border-latte' : ''}>
+                              <tr key={i} className={i < (section.table?.length ?? 0) - 1 ? 'border-b border-latte' : ''}>
                                 <td className="font-body text-xs uppercase tracking-widest text-dark py-3 px-4 w-5/12 align-top bg-slate">
                                   {row.label}
                                 </td>
