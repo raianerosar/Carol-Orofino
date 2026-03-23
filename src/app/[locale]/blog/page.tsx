@@ -115,12 +115,14 @@ export default async function BlogPage({
                         {' · '}
                         {post.readTime} {t('minRead')}
                       </p>
-                      <h2 className="font-display text-2xl md:text-3xl text-primary tracking-wide mb-3">
-                        {content.title}
-                      </h2>
-                      <p className="font-body text-base text-dark italic leading-relaxed mb-6">
-                        {content.subtitle}
-                      </p>
+                      <Link href={`/${locale}/blog/${post.slug}`} className="group">
+                        <h2 className="font-display text-2xl md:text-3xl text-primary tracking-wide mb-3 group-hover:text-walnut transition-colors">
+                          {content.title}
+                        </h2>
+                        <p className="font-body text-base text-dark italic leading-relaxed mb-6">
+                          {content.subtitle}
+                        </p>
+                      </Link>
                       <Link
                         href={`/${locale}/blog/${post.slug}`}
                         className="font-body text-xs uppercase tracking-widest text-primary border-b border-primary pb-0.5 transition-colors hover:text-mauve hover:border-mauve"
