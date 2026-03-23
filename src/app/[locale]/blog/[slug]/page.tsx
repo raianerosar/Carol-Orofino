@@ -26,6 +26,15 @@ export async function generateMetadata({
   return { title: `${content.title} — Carol Orofino` }
 }
 
+function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '')
+}
+
 export default async function BlogPostPage({
   params,
 }: {
@@ -41,6 +50,8 @@ export default async function BlogPostPage({
 
   const localeCode =
     lang === 'pt' ? 'pt-BR' : lang === 'es' ? 'es-ES' : 'en-US'
+
+  const sectionHeadings = content.sections.map((s) => ({ heading: s.heading }))
 
   return (
     <>
@@ -80,7 +91,7 @@ export default async function BlogPostPage({
       </div>
 
       {/* Two-column layout */}
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-16 py-16 px-6 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-16 py-16 px-6 max-w-6xl mx-auto items-start">
         {/* Main: article content */}
         <article>
           <Link
@@ -96,7 +107,7 @@ export default async function BlogPostPage({
               <section key={idx}>
                 {section.type === 'fabric' ? (
                   <>
-                    <h2 className="font-display text-3xl text-primary tracking-wide mb-5">
+                    <h2 id={slugify(section.heading)} className="font-display text-3xl text-primary tracking-wide mb-5">
                       {section.heading}
                     </h2>
                     <p className="font-body text-base text-dark leading-relaxed mb-6">
@@ -141,7 +152,7 @@ export default async function BlogPostPage({
                   </>
                 ) : (
                   <>
-                    <h2 className="font-display text-3xl text-primary tracking-wide mb-5">
+                    <h2 id={slugify(section.heading)} className="font-display text-3xl text-primary tracking-wide mb-5">
                       {section.heading}
                     </h2>
                     <div className="flex flex-col gap-4">
@@ -211,7 +222,7 @@ export default async function BlogPostPage({
         </article>
 
         {/* Sidebar */}
-        <BlogSidebar locale={lang} currentSlug={post.slug} />
+        <BlogSidebar locale={lang} currentSlug={post.slug} sections={sectionHeadings} />
       </div>
     </>
   )

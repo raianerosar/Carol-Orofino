@@ -168,8 +168,8 @@ export default async function HomePage({
           </p>
           <div className="flex flex-col divide-y divide-stone">
             {posts.map((post) => (
-              <div key={post.slug} className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 py-8">
-                <Link href={`/${locale}/blog/${post.slug}`} className="max-w-xl group">
+              <div key={post.slug} className="py-8">
+                <Link href={`/${locale}/blog/${post.slug}`} className="group">
                   <h2 className="font-display text-2xl md:text-3xl text-primary tracking-wide mb-2 group-hover:text-walnut transition-colors">
                     {post.translations[locale as Locale].title}
                   </h2>
@@ -177,14 +177,16 @@ export default async function HomePage({
                     {post.translations[locale as Locale].subtitle}
                   </p>
                 </Link>
-                <Link
-                  href={`/${locale}/blog`}
-                  className="shrink-0 inline-block font-body text-xs uppercase tracking-widest text-primary border border-primary px-8 py-3 transition-colors hover:bg-mauve hover:text-background"
-                >
-                  Blog
-                </Link>
               </div>
             ))}
+          </div>
+          <div className="mt-10">
+            <Link
+              href={`/${locale}/blog`}
+              className="inline-block font-body text-xs uppercase tracking-widest text-primary border border-primary px-8 py-3 transition-colors hover:bg-mauve hover:text-background"
+            >
+              {t('blogLink')}
+            </Link>
           </div>
         </div>
       </section>

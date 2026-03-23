@@ -156,7 +156,11 @@
     "sidebarCategories": "Categorías",
     "allCategories": "Todos",
     "noPosts": "No hay artículos en esta categoría.",
-    "expertTip": "Consejo del experto"
+    "expertTip": "Consejo del experto",
+    "sidebarInThisArticle": "En este artículo",
+    "sidebarCtaTitle": "¿Quieres transformar tu espacio?",
+    "sidebarCtaBody": "Carol Orofino trabaja proyectos residenciales y comerciales en todo Brasil.",
+    "sidebarCtaButton": "Habla con Carol"
   },
   "footer": {
     "rights": "Todos los derechos reservados."
