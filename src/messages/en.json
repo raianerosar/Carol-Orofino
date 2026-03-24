@@ -24,7 +24,11 @@
     "aboutLink": "Learn more",
     "blogTitle": "From the Journal",
     "blogTeaser": "Reflections on design, references, and the art of creating spaces that endure.",
-    "blogLink": "Read articles"
+    "blogLink": "Read articles",
+    "questionnaireSectionEyebrow": "Let's work together",
+    "questionnaireSectionTitle": "Tell me about your project",
+    "questionnaireSectionBody": "Fill out the briefing questionnaire and tell me about your space, style, and dreams. With this information, I can create a truly personalized proposal for you.",
+    "questionnaireSectionCta": "Start questionnaire"
   },
   "projects": {
     "title": "Delivered Projects",
@@ -48,7 +52,12 @@
     "title": "About Carol Orofino",
     "bio": "Carol Orofino is an interior designer with a specialization in Sustainable Design. Over more than 10 years of career, she has developed residential and commercial projects that translate the personality of her clients into unique and functional spaces.",
     "philosophy": "Design Philosophy",
-    "philosophyText": "I believe interior design goes beyond aesthetics. It's about creating spaces that transform the experience of those who live in them — spaces that inspire, welcome, and endure."
+    "philosophyText": "I believe interior design goes beyond aesthetics. It's about creating spaces that transform the experience of those who live in them — spaces that inspire, welcome, and endure.",
+    "eyebrow": "About us",
+    "ctaTitle": "Let's work together",
+    "ctaSubtitle": "Tell me about your project",
+    "ctaButton": "Chat on WhatsApp",
+    "ctaWhatsappMessage": "Hello Carol, I'd like to know more about your services."
   },
   "services": {
     "title": "Services"
