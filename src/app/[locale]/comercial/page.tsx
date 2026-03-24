@@ -54,24 +54,24 @@ export default async function ComercialPage({
       <section className="grid grid-cols-1 md:grid-cols-2 min-h-[540px]">
         <div className="flex flex-col items-center justify-center px-8 py-16 md:px-16 md:py-20 text-center">
           <span className="font-body text-xs uppercase tracking-widest text-primary mb-6">
-            01 — Estratégia
+            01 — Identidade
           </span>
           <h2 className="font-display text-4xl md:text-5xl text-text-primary tracking-wide leading-tight mb-8">
-            Design que<br />trabalha por você
+            Design que revela<br />quem você é
           </h2>
           <p className="font-body text-sm text-dark leading-relaxed max-w-md mb-6">
-            No espaço comercial, o ambiente fala antes de você. Ele comunica seriedade,
-            personalidade ou acolhimento — às vezes os três ao mesmo tempo.
+            O espaço comercial é uma extensão da sua marca. Antes de qualquer palavra,
+            ele já comunica valores, cuidado e personalidade.
           </p>
           <p className="font-body text-sm text-dark leading-relaxed max-w-md">
-            Trabalho para que cada detalhe — layout, mobiliário, luz, paleta — reforce
-            quem você é e o que você quer transmitir.
+            Cada escolha — a madeira, a luz, o detalhe curatorial — é pensada para
+            traduzir sua essência em ambiente.
           </p>
         </div>
         <div className="relative min-h-[400px] md:min-h-0">
           <Image
-            src="/images/categories/comercial-01.jpg"
-            alt="Projeto comercial Carol Orofino"
+            src="/images/categories/comercial-01.png"
+            alt="Escritório comercial Carol Orofino — identidade"
             fill
             className="object-cover object-center"
           />
@@ -82,27 +82,55 @@ export default async function ComercialPage({
       <section className="grid grid-cols-1 md:grid-cols-2 min-h-[540px]">
         <div className="relative min-h-[400px] md:min-h-0 order-2 md:order-1">
           <Image
-            src="/images/categories/comercial-02.jpg"
-            alt="Detalhe de projeto comercial"
+            src="/images/categories/comercial-02.png"
+            alt="Escritório executivo Carol Orofino — presença"
             fill
             className="object-cover object-center"
           />
         </div>
         <div className="flex flex-col items-center justify-center px-8 py-16 md:px-16 md:py-20 text-center order-1 md:order-2">
           <span className="font-body text-xs uppercase tracking-widest text-primary mb-6">
-            02 — Execução
+            02 — Presença
           </span>
           <h2 className="font-display text-4xl md:text-5xl text-text-primary tracking-wide leading-tight mb-8">
-            Ambientes que<br />ficam na memória
+            Ambientes que<br />constroem autoridade
           </h2>
           <p className="font-body text-sm text-dark leading-relaxed max-w-md mb-6">
-            Do briefing à entrega, acompanho cada etapa: projeto técnico, materiais,
-            fornecedores, obra.
+            Credibilidade se constrói também no espaço. Um ambiente bem projetado
+            transmite seriedade, inspira confiança e posiciona sua marca antes mesmo
+            da primeira reunião.
           </p>
           <p className="font-body text-sm text-dark leading-relaxed max-w-md">
-            O objetivo é sempre o mesmo — um espaço que as pessoas queiram voltar, que
-            reforce a credibilidade da sua marca e que funcione impecavelmente todos os dias.
+            Do mobiliário à paleta, cada elemento reforça a mensagem que você quer passar.
           </p>
+        </div>
+      </section>
+
+      {/* ── Seção 3: texto à esquerda, imagem à direita ──────────────────── */}
+      <section className="grid grid-cols-1 md:grid-cols-2 min-h-[540px]">
+        <div className="flex flex-col items-center justify-center px-8 py-16 md:px-16 md:py-20 text-center">
+          <span className="font-body text-xs uppercase tracking-widest text-primary mb-6">
+            03 — Equilíbrio
+          </span>
+          <h2 className="font-display text-4xl md:text-5xl text-text-primary tracking-wide leading-tight mb-8">
+            Funcionalidade<br />com leveza
+          </h2>
+          <p className="font-body text-sm text-dark leading-relaxed max-w-md mb-6">
+            Produtividade real exige conforto. Espaços que integram luz natural,
+            proporção e materiais certos criam ambientes onde as pessoas trabalham
+            melhor — e permanecem com prazer.
+          </p>
+          <p className="font-body text-sm text-dark leading-relaxed max-w-md">
+            Projeto para que beleza e função andem juntas, sem concessões.
+          </p>
+        </div>
+        <div className="relative min-h-[400px] md:min-h-0">
+          <Image
+            src="/images/categories/comercial-03.png"
+            alt="Escritório comercial Carol Orofino — equilíbrio"
+            fill
+            className="object-cover object-center"
+          />
         </div>
       </section>
 
