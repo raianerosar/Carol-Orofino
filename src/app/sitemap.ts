@@ -6,7 +6,7 @@ const BASE_URL = 'https://carolorofino.com.br'
 export default function sitemap(): MetadataRoute.Sitemap {
   const locales = routing.locales
 
-  const staticRoutes = ['', '/sobre', '/servicos', '/contato']
+  const staticRoutes = ['', '/sobre', '/contato']
 
   const staticEntries = locales.flatMap((locale) =>
     staticRoutes.map((route) => ({
