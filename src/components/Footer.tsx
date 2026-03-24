@@ -39,7 +39,7 @@ export default function Footer() {
               {t('nav.about')}
             </Link>
             <Link
-              href={`/${locale}/servicos`}
+              href={`/${locale}/sobre#servicos`}
               className="font-body text-xs uppercase tracking-widest text-white/70 transition-colors hover:text-white"
             >
               {t('nav.services')}
