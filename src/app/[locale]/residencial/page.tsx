@@ -22,7 +22,7 @@ export default async function ResidencialPage({
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
       <section className="relative h-[75vh] min-h-[520px] w-full overflow-hidden">
         <Image
-          src="/images/categories/residencial-hero.jpg"
+          src="/images/categories/residencial-hero.png"
           alt="Projetos Residenciais"
           fill
           priority
