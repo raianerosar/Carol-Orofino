@@ -18,7 +18,7 @@ const PHOTOS_MAX_TOTAL = 50 * 1024 * 1024
 
 type Step2Data = {
   roomType: string[]
-  area: number | null
+  area: string
   floorPlanFile: File | null
   photoFiles: File[]
 }
@@ -31,7 +31,7 @@ type Props = {
   messages: {
     roomType: string; roomTypePlaceholder: string
     roomOptions: Record<string, string>; roomTypeError: string
-    area: string; floorPlan: string; floorPlanHint: string
+    area: string; areaPlaceholder: string; floorPlan: string; floorPlanHint: string
     photos: string; photosHint: string
     fileTooLarge: string; fileInvalidType: string
   }
@@ -120,14 +120,12 @@ export default function Step2Environment({ data, onChange, onNext, onBack, messa
       {/* Area */}
       <motion.div custom={1} variants={fieldVariants} initial="hidden" animate="visible">
         <label className="mb-1 block font-body text-xs uppercase tracking-[0.2em] text-slate">{messages.area}</label>
-        <input
-          type="number"
-          min={1}
-          max={10000}
-          step={1}
-          value={data.area ?? ''}
-          onChange={e => onChange({ ...data, area: e.target.value ? parseInt(e.target.value) : null })}
-          className={inputClass}
+        <textarea
+          value={data.area}
+          onChange={e => onChange({ ...data, area: e.target.value })}
+          placeholder={messages.areaPlaceholder}
+          rows={2}
+          className={`${inputClass} resize-none`}
         />
       </motion.div>
 

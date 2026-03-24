@@ -37,7 +37,7 @@ export default function QuestionnaireWizard({ messages }: Props) {
   const [submitError, setSubmitError] = useState<string | null>(null)
 
   const [step1, setStep1] = useState({ name: '', whatsapp: '', email: '' })
-  const [step2, setStep2] = useState({ roomType: [] as string[], area: null as number | null, floorPlanFile: null as File | null, photoFiles: [] as File[] })
+  const [step2, setStep2] = useState({ roomType: [] as string[], area: '' as string, floorPlanFile: null as File | null, photoFiles: [] as File[] })
   const [step3, setStep3] = useState({ styles: [] as string[], mustHave: '' })
   const [step4, setStep4] = useState({ scopeType: '', urgency: '', budget: '' })
 
