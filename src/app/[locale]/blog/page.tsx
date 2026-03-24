@@ -19,24 +19,15 @@ export async function generateMetadata({
 
 export default async function BlogPage({
   params,
-  searchParams,
 }: {
   params: Promise<{ locale: string }>
-  searchParams: Promise<{ category?: string }>
 }) {
   const { locale } = await params
-  const { category } = await searchParams
   const t = await getTranslations({ locale, namespace: 'blog' })
   const lang = locale as Locale
 
-  // Deduplicated, sorted categories for the filter row
-  const allCategories = [...new Set(posts.map((p) => p.category))].sort()
-
-  // Sort posts descending by date, then filter by category if active
-  const sortedPosts = [...posts].sort((a, b) => b.date.localeCompare(a.date))
-  const filteredPosts = category
-    ? sortedPosts.filter((p) => p.category === category)
-    : sortedPosts
+  // Sort posts descending by date
+  const filteredPosts = [...posts].sort((a, b) => b.date.localeCompare(a.date))
 
   return (
     <div className="mx-auto max-w-6xl px-6 py-32">
@@ -47,33 +38,6 @@ export default async function BlogPage({
       <p className="font-body text-sm text-mauve uppercase tracking-widest mb-12">
         {t('subtitle')}
       </p>
-
-      {/* Category filter */}
-      <div className="flex flex-wrap gap-3">
-        <Link
-          href={`/${locale}/blog`}
-          className={`font-body text-xs uppercase tracking-widest px-4 py-1.5 border transition-colors ${
-            !category
-              ? 'border-primary text-primary'
-              : 'border-stone text-dark hover:border-primary hover:text-primary'
-          }`}
-        >
-          {t('allCategories')}
-        </Link>
-        {allCategories.map((cat) => (
-          <Link
-            key={cat}
-            href={`/${locale}/blog?category=${encodeURIComponent(cat)}`}
-            className={`font-body text-xs uppercase tracking-widest px-4 py-1.5 border transition-colors ${
-              category === cat
-                ? 'border-primary text-primary'
-                : 'border-stone text-dark hover:border-primary hover:text-primary'
-            }`}
-          >
-            {cat}
-          </Link>
-        ))}
-      </div>
 
       <SectionDivider />
 
