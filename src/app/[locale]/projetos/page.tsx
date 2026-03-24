@@ -119,7 +119,7 @@ export default async function ProjetosPage({
         </p>
         <Link
           href={`/${locale}/questionario`}
-          className="font-body text-xs uppercase tracking-widest border border-text-primary text-text-primary px-8 py-3 transition-colors hover:bg-mauve hover:text-background hover:border-mauve"
+          className="bg-slate border border-white/60 px-8 py-3 font-display font-light italic text-white transition-opacity hover:opacity-80"
         >
           Preencher questionário
         </Link>
