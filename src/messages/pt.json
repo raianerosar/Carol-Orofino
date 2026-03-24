@@ -160,7 +160,108 @@
     "sidebarInThisArticle": "Neste artigo",
     "sidebarCtaTitle": "Quer transformar seu espaço?",
     "sidebarCtaBody": "Carol Orofino atende projetos residenciais e comerciais em todo o Brasil.",
-    "sidebarCtaButton": "Fale com a Carol"
+    "sidebarCtaButton": "Fale com a Carol",
+    "categoryLabels": {
+      "Luxo": "Luxo",
+      "Minimalismo": "Minimalismo",
+      "Design Escandinavo": "Design Escandinavo"
+    }
+  },
+  "comercial": {
+    "hero": "Comercial",
+    "back": "Voltar",
+    "s1": {
+      "label": "01 — Estratégia",
+      "title": "Design que\ntrabalha por você",
+      "p1": "No espaço comercial, o ambiente fala antes de você. Ele comunica seriedade, personalidade ou acolhimento — às vezes os três ao mesmo tempo.",
+      "p2": "Trabalho para que cada detalhe — layout, mobiliário, luz, paleta — reforce quem você é e o que você quer transmitir."
+    },
+    "s2": {
+      "label": "02 — Execução",
+      "title": "Ambientes que\nficam na memória",
+      "p1": "Do briefing à entrega, acompanho cada etapa: projeto técnico, materiais, fornecedores, obra.",
+      "p2": "O objetivo é sempre o mesmo — um espaço que as pessoas queiram voltar, que reforce a credibilidade da sua marca e que funcione impecavelmente todos os dias."
+    },
+    "cta": {
+      "title": "Vamos projetar seu espaço?",
+      "body": "Me conta sobre o seu negócio e o que você precisa do ambiente.",
+      "button": "Preencher questionário"
+    }
+  },
+  "residencial": {
+    "hero": "Residencial",
+    "back": "Voltar",
+    "s1": {
+      "label": "01 — Abordagem",
+      "title": "Um lar feito\npara você",
+      "p1": "Antes de qualquer traço, eu ouço. Como você acorda, como você recebe, o que te cansa no espaço que tem hoje, o que nunca abre mão.",
+      "p2": "Só com isso em mãos começa o projeto — que une o que é bonito com o que realmente funciona para a sua vida."
+    },
+    "s2": {
+      "label": "02 — Resultado",
+      "title": "Espaços que\nacolhem",
+      "p1": "Do apartamento compacto à casa ampla, o cuidado é o mesmo: materiais que envelhecem bem, luz que transforma o ambiente, cada peça no lugar certo.",
+      "p2": "O resultado é um lar que parece ter sempre sido assim — e que você não vai querer deixar."
+    },
+    "cta": {
+      "title": "Vamos criar seu lar?",
+      "body": "Conta como é o seu espaço e o que você sonha para ele.",
+      "button": "Preencher questionário"
+    }
+  },
+  "designDeInteriores": {
+    "hero": "Design de\nInteriores",
+    "back": "Voltar",
+    "s1": {
+      "label": "01 — Processo",
+      "title": "Do conceito\nà entrega",
+      "p1": "Começo ouvindo. A rotina, os gostos, o que incomoda no espaço atual, o que faz falta. Só depois vem o projeto — conceito, moodboard, 3D e acompanhamento de obra até o dia da entrega.",
+      "p2": "O resultado é um ambiente que parece ter sido sempre assim: como se não pudesse ser de outra forma."
+    },
+    "s2": {
+      "label": "02 — Filosofia",
+      "title": "Espaços que\ntransformam",
+      "p1": "Design de interiores não é decoração. É a diferença entre um espaço que você habita e um espaço que te pertence.",
+      "p2": "Cada material, cada proporção, cada fonte de luz é escolhida com intenção — para que o ambiente todo fale a mesma língua."
+    },
+    "cta": {
+      "title": "Vamos criar juntos?",
+      "body": "Conta como é o seu espaço e o que você sonha para ele.",
+      "button": "Preencher questionário"
+    }
+  },
+  "projetos": {
+    "hero": "Projetos",
+    "back": "Voltar",
+    "s1": {
+      "label": "01 — Cozinha",
+      "title": "Praticidade\ne beleza",
+      "p1": "A cozinha é o coração da casa. Armários planejados, bancadas bem dimensionadas e iluminação pensada fazem toda a diferença no cotidiano.",
+      "p2": "Cada centímetro desenhado para o seu ritmo de vida."
+    },
+    "s2": {
+      "label": "02 — Escritório",
+      "title": "Espaço para\nfoco e criatividade",
+      "p1": "Um ambiente de trabalho bem projetado vai além de mesa e cadeira. Organização, luz e fluxo correto criam o cenário ideal para produzir com qualidade.",
+      "p2": "Porque o lugar onde você trabalha também merece cuidado."
+    },
+    "s3": {
+      "label": "03 — Dormitório",
+      "title": "Um lugar para\ndescansar de verdade",
+      "p1": "O quarto precisa ser um refúgio. Materiais que aquecem, paleta que acalma e móveis que se encaixam no ritmo de quem dorme ali.",
+      "p2": "Cada decisão pensada para que você sinta que chegou em casa."
+    },
+    "s4": {
+      "label": "04 — Banheiro",
+      "title": "Um espaço\nde bem-estar",
+      "p1": "O banheiro deixou de ser só utilidade. Com os materiais certos e uma composição equilibrada, ele vira um ambiente de descanso e regeneração.",
+      "p2": "Elegância nos detalhes que você toca e vê todos os dias."
+    },
+    "cta": {
+      "title": "Pronto para começar?",
+      "body": "Conta sobre o seu espaço e vamos criar algo incrível juntos.",
+      "button": "Preencher questionário"
+    }
   },
   "footer": {
     "rights": "Todos os direitos reservados."

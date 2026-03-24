@@ -160,7 +160,108 @@
     "sidebarInThisArticle": "In this article",
     "sidebarCtaTitle": "Ready to transform your space?",
     "sidebarCtaBody": "Carol Orofino takes on residential and commercial projects across Brazil.",
-    "sidebarCtaButton": "Talk to Carol"
+    "sidebarCtaButton": "Talk to Carol",
+    "categoryLabels": {
+      "Luxo": "Luxury",
+      "Minimalismo": "Minimalism",
+      "Design Escandinavo": "Scandinavian Design"
+    }
+  },
+  "comercial": {
+    "hero": "Commercial",
+    "back": "Back",
+    "s1": {
+      "label": "01 — Strategy",
+      "title": "Design that\nworks for you",
+      "p1": "In a commercial space, the environment speaks before you do. It conveys seriousness, personality, or warmth — sometimes all three at once.",
+      "p2": "I work to ensure every detail — layout, furniture, light, palette — reinforces who you are and what you want to convey."
+    },
+    "s2": {
+      "label": "02 — Execution",
+      "title": "Spaces that\nstay with you",
+      "p1": "From briefing to delivery, I oversee every step: technical design, materials, suppliers, construction.",
+      "p2": "The goal is always the same — a space people want to return to, that reinforces your brand's credibility and works flawlessly every day."
+    },
+    "cta": {
+      "title": "Let's design your space?",
+      "body": "Tell me about your business and what you need from the space.",
+      "button": "Fill out questionnaire"
+    }
+  },
+  "residencial": {
+    "hero": "Residential",
+    "back": "Back",
+    "s1": {
+      "label": "01 — Approach",
+      "title": "A home made\njust for you",
+      "p1": "Before any line is drawn, I listen. How you wake up, how you entertain, what drains you about your current space, what you can't live without.",
+      "p2": "Only then does the project begin — one that unites what is beautiful with what truly works for your life."
+    },
+    "s2": {
+      "label": "02 — Result",
+      "title": "Spaces that\nwelcome",
+      "p1": "From a compact apartment to a spacious house, the care is the same: materials that age beautifully, light that transforms, each piece in the right place.",
+      "p2": "The result is a home that feels like it was always that way — and one you won't want to leave."
+    },
+    "cta": {
+      "title": "Let's create your home?",
+      "body": "Tell me about your space and what you dream for it.",
+      "button": "Fill out questionnaire"
+    }
+  },
+  "designDeInteriores": {
+    "hero": "Interior\nDesign",
+    "back": "Back",
+    "s1": {
+      "label": "01 — Process",
+      "title": "From concept\nto delivery",
+      "p1": "I start by listening. The routine, the tastes, what bothers you about the current space, what's missing. Only then comes the project — concept, moodboard, 3D, and on-site supervision until the day of delivery.",
+      "p2": "The result is a space that feels like it was always that way: as if it couldn't be any other way."
+    },
+    "s2": {
+      "label": "02 — Philosophy",
+      "title": "Spaces that\ntransform",
+      "p1": "Interior design isn't decoration. It's the difference between a space you inhabit and a space that belongs to you.",
+      "p2": "Every material, every proportion, every light source is chosen with intention — so the whole environment speaks the same language."
+    },
+    "cta": {
+      "title": "Let's create together?",
+      "body": "Tell me about your space and what you dream for it.",
+      "button": "Fill out questionnaire"
+    }
+  },
+  "projetos": {
+    "hero": "Projects",
+    "back": "Back",
+    "s1": {
+      "label": "01 — Kitchen",
+      "title": "Practicality\nand beauty",
+      "p1": "The kitchen is the heart of the home. Custom cabinets, well-proportioned countertops, and thoughtful lighting make all the difference in everyday life.",
+      "p2": "Every centimeter designed around your lifestyle."
+    },
+    "s2": {
+      "label": "02 — Studio",
+      "title": "Space for\nfocus and creativity",
+      "p1": "A well-designed workspace goes beyond a desk and a chair. Organization, light, and the right flow create the ideal setting for quality work.",
+      "p2": "Because the place where you work deserves the same care."
+    },
+    "s3": {
+      "label": "03 — Bedroom",
+      "title": "A place to\ntruly rest",
+      "p1": "The bedroom needs to be a sanctuary. Warming materials, a calming palette, and furniture that fits the rhythm of the person living there.",
+      "p2": "Every decision made so you feel you've truly arrived home."
+    },
+    "s4": {
+      "label": "04 — Bathroom",
+      "title": "A space\nfor well-being",
+      "p1": "The bathroom is no longer just about utility. With the right materials and a balanced composition, it becomes a place of rest and renewal.",
+      "p2": "Elegance in the details you touch and see every day."
+    },
+    "cta": {
+      "title": "Ready to start?",
+      "body": "Tell me about your space and let's create something incredible together.",
+      "button": "Fill out questionnaire"
+    }
   },
   "footer": {
     "rights": "All rights reserved."

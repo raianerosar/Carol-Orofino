@@ -160,7 +160,108 @@
     "sidebarInThisArticle": "En este artículo",
     "sidebarCtaTitle": "¿Quieres transformar tu espacio?",
     "sidebarCtaBody": "Carol Orofino trabaja proyectos residenciales y comerciales en todo Brasil.",
-    "sidebarCtaButton": "Habla con Carol"
+    "sidebarCtaButton": "Habla con Carol",
+    "categoryLabels": {
+      "Luxo": "Lujo",
+      "Minimalismo": "Minimalismo",
+      "Design Escandinavo": "Diseño Escandinavo"
+    }
+  },
+  "comercial": {
+    "hero": "Comercial",
+    "back": "Volver",
+    "s1": {
+      "label": "01 — Estrategia",
+      "title": "Diseño que\ntrabaja por ti",
+      "p1": "En el espacio comercial, el ambiente habla antes que tú. Transmite seriedad, personalidad o calidez — a veces las tres a la vez.",
+      "p2": "Trabajo para que cada detalle — distribución, mobiliario, luz, paleta — refuerce quién eres y lo que quieres transmitir."
+    },
+    "s2": {
+      "label": "02 — Ejecución",
+      "title": "Ambientes que\nperduran en la memoria",
+      "p1": "Del briefing a la entrega, acompaño cada etapa: proyecto técnico, materiales, proveedores, obra.",
+      "p2": "El objetivo es siempre el mismo — un espacio al que la gente quiera volver, que refuerce la credibilidad de tu marca y funcione impecablemente cada día."
+    },
+    "cta": {
+      "title": "¿Diseñamos tu espacio?",
+      "body": "Cuéntame sobre tu negocio y lo que necesitas del ambiente.",
+      "button": "Rellenar cuestionario"
+    }
+  },
+  "residencial": {
+    "hero": "Residencial",
+    "back": "Volver",
+    "s1": {
+      "label": "01 — Enfoque",
+      "title": "Un hogar hecho\npara ti",
+      "p1": "Antes de cualquier trazo, escucho. Cómo despiertas, cómo recibes visitas, qué te cansa del espacio actual, a qué no puedes renunciar.",
+      "p2": "Solo con eso en mano comienza el proyecto — que une lo que es bello con lo que realmente funciona para tu vida."
+    },
+    "s2": {
+      "label": "02 — Resultado",
+      "title": "Espacios que\nacogen",
+      "p1": "Del apartamento compacto a la casa amplia, el cuidado es el mismo: materiales que envejecen bien, luz que transforma, cada pieza en el lugar correcto.",
+      "p2": "El resultado es un hogar que parece haber sido siempre así — y que no querrás dejar."
+    },
+    "cta": {
+      "title": "¿Creamos tu hogar?",
+      "body": "Cuéntame cómo es tu espacio y lo que sueñas para él.",
+      "button": "Rellenar cuestionario"
+    }
+  },
+  "designDeInteriores": {
+    "hero": "Diseño de\nInteriores",
+    "back": "Volver",
+    "s1": {
+      "label": "01 — Proceso",
+      "title": "Del concepto\na la entrega",
+      "p1": "Empiezo escuchando. La rutina, los gustos, lo que molesta del espacio actual, lo que falta. Solo después llega el proyecto — concepto, moodboard, 3D y seguimiento de obra hasta el día de la entrega.",
+      "p2": "El resultado es un ambiente que parece haber sido siempre así: como si no pudiera ser de otra manera."
+    },
+    "s2": {
+      "label": "02 — Filosofía",
+      "title": "Espacios que\ntransforman",
+      "p1": "El diseño de interiores no es decoración. Es la diferencia entre un espacio que habitas y un espacio que te pertenece.",
+      "p2": "Cada material, cada proporción, cada fuente de luz se elige con intención — para que todo el ambiente hable el mismo idioma."
+    },
+    "cta": {
+      "title": "¿Creamos juntos?",
+      "body": "Cuéntame cómo es tu espacio y lo que sueñas para él.",
+      "button": "Rellenar cuestionario"
+    }
+  },
+  "projetos": {
+    "hero": "Proyectos",
+    "back": "Volver",
+    "s1": {
+      "label": "01 — Cocina",
+      "title": "Practicidad\ny belleza",
+      "p1": "La cocina es el corazón del hogar. Muebles a medida, encimeras bien dimensionadas e iluminación pensada marcan la diferencia en el día a día.",
+      "p2": "Cada centímetro diseñado para tu ritmo de vida."
+    },
+    "s2": {
+      "label": "02 — Estudio",
+      "title": "Espacio para\nel foco y la creatividad",
+      "p1": "Un espacio de trabajo bien diseñado va más allá de un escritorio y una silla. Organización, luz y flujo correcto crean el escenario ideal para producir con calidad.",
+      "p2": "Porque el lugar donde trabajas también merece cuidado."
+    },
+    "s3": {
+      "label": "03 — Dormitorio",
+      "title": "Un lugar para\ndescansar de verdad",
+      "p1": "El dormitorio tiene que ser un refugio. Materiales que calientan, paleta que calma y muebles que encajan en el ritmo de quien duerme allí.",
+      "p2": "Cada decisión pensada para que sientas que llegaste a casa."
+    },
+    "s4": {
+      "label": "04 — Baño",
+      "title": "Un espacio\nde bienestar",
+      "p1": "El baño dejó de ser solo utilidad. Con los materiales correctos y una composición equilibrada, se convierte en un ambiente de descanso y regeneración.",
+      "p2": "Elegancia en los detalles que tocas y ves todos los días."
+    },
+    "cta": {
+      "title": "¿Listo para empezar?",
+      "body": "Cuéntame sobre tu espacio y creemos algo increíble juntos.",
+      "button": "Rellenar cuestionario"
+    }
   },
   "footer": {
     "rights": "Todos los derechos reservados."

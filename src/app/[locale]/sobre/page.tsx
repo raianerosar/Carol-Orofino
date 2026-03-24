@@ -1,6 +1,7 @@
 // src/app/[locale]/sobre/page.tsx
 import { getTranslations } from 'next-intl/server'
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export async function generateMetadata({
   params,
@@ -25,17 +26,28 @@ export default async function AboutPage({
       <h1 className="font-display text-4xl md:text-5xl text-primary tracking-wide mb-12">
         {t('title')}
       </h1>
-      <div className="flex flex-col gap-8 max-w-2xl">
-        <p className="font-body text-base text-dark leading-relaxed">
-          {t('bio')}
-        </p>
-        <div>
-          <h2 className="font-display text-2xl text-primary tracking-wide mb-4">
-            {t('philosophy')}
-          </h2>
-          <p className="font-body text-base text-dark leading-relaxed italic">
-            {t('philosophyText')}
+      <div className="flex flex-col md:flex-row gap-12 items-start">
+        <div className="w-full md:w-80 shrink-0">
+          <Image
+            src="/images/carol-sobre.png"
+            alt="Carol Orofino"
+            width={320}
+            height={380}
+            className="w-full object-cover object-top rounded-sm"
+          />
+        </div>
+        <div className="flex flex-col gap-8">
+          <p className="font-body text-base text-dark leading-relaxed">
+            {t('bio')}
           </p>
+          <div>
+            <h2 className="font-display text-2xl text-primary tracking-wide mb-4">
+              {t('philosophy')}
+            </h2>
+            <p className="font-body text-base text-dark leading-relaxed italic">
+              {t('philosophyText')}
+            </p>
+          </div>
         </div>
       </div>
     </div>

@@ -4,6 +4,8 @@ export interface TextSection {
   body: string
   table?: { label: string; value: string }[]
   tip?: string
+  image?: string
+  imageCaption?: string
 }
 
 export interface FabricSection {

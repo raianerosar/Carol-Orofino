@@ -27,6 +27,8 @@ export default async function BlogPage({
   const { category } = await searchParams
   const t = await getTranslations({ locale, namespace: 'blog' })
   const lang = locale as Locale
+  const categoryLabels = t.raw('categoryLabels') as Record<string, string>
+  const translateCategory = (cat: string) => categoryLabels[cat] ?? cat
 
   // Deduplicated, sorted categories for the filter row
   const allCategories = [...new Set(posts.map((p) => p.category))].sort()
@@ -69,7 +71,7 @@ export default async function BlogPage({
                 : 'border-stone text-dark hover:border-primary hover:text-primary'
             }`}
           >
-            {cat}
+            {translateCategory(cat)}
           </Link>
         ))}
       </div>
@@ -106,7 +108,7 @@ export default async function BlogPage({
                     {/* Text content */}
                     <div className="border-t border-stone pt-10 pb-10">
                       <p className="font-body text-xs text-mauve uppercase tracking-widest mb-4">
-                        {post.category}
+                        {translateCategory(post.category)}
                         {' · '}
                         {new Date(post.date).toLocaleDateString(
                           lang === 'pt' ? 'pt-BR' : lang === 'es' ? 'es-ES' : 'en-US',
