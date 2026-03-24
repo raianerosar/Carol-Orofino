@@ -34,9 +34,9 @@ export default async function SobrePage({
   return (
     <>
       {/* Section 1 — Hero split: photo + bio */}
-      <section className="grid grid-cols-1 md:grid-cols-2 min-h-[560px] overflow-hidden">
+      <section className="grid grid-cols-1 md:grid-cols-2 min-h-[560px] overflow-hidden mt-16">
         {/* Left: Photo */}
-        <div className="relative min-h-[320px] md:min-h-0 overflow-hidden">
+        <div className="relative min-h-[420px] md:min-h-0 overflow-hidden">
           <Image
             src="/images/carol-portrait.png"
             alt="Carol Orofino"
@@ -67,20 +67,20 @@ export default async function SobrePage({
       <SectionDivider />
 
       {/* Section 2 — Filosofia de Design */}
-      <section className="bg-linen py-20 px-6 md:px-24">
+      <section className="bg-slate py-20 px-6 md:px-24">
         <div className="max-w-3xl mx-auto">
           <div className="flex gap-10 md:gap-16">
             {/* Vertical bar — desktop only */}
-            <div className="hidden md:block w-px self-stretch bg-walnut flex-shrink-0" />
+            <div className="hidden md:block w-px self-stretch bg-white/20 flex-shrink-0" />
 
             <div>
               {/* Horizontal top accent — mobile only */}
-              <div className="md:hidden h-px w-10 bg-walnut mb-6" />
+              <div className="md:hidden h-px w-10 bg-white/20 mb-6" />
 
-              <p className="font-body text-xs uppercase tracking-[0.35em] text-dark mb-4">
+              <p className="font-body text-xs uppercase tracking-[0.35em] text-white/60 mb-4">
                 {t('philosophy')}
               </p>
-              <blockquote className="font-display text-2xl md:text-3xl font-light italic text-primary leading-[1.3] mb-6">
+              <blockquote className="font-display text-2xl md:text-3xl font-light italic text-white leading-[1.3] mb-6">
                 {t('philosophyText')}
               </blockquote>
             </div>
