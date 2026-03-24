@@ -68,7 +68,7 @@ export default async function ComercialPage({
             traduzir sua essência em ambiente.
           </p>
         </div>
-        <div className="relative min-h-[400px] md:min-h-0">
+        <div className="relative aspect-square">
           <Image
             src="/images/categories/comercial-01.png"
             alt="Escritório comercial Carol Orofino — identidade"
@@ -80,7 +80,7 @@ export default async function ComercialPage({
 
       {/* ── Seção 2: imagem à esquerda, texto à direita ──────────────────── */}
       <section className="grid grid-cols-1 md:grid-cols-2 min-h-[540px]">
-        <div className="relative min-h-[400px] md:min-h-0 order-2 md:order-1">
+        <div className="relative aspect-square order-2 md:order-1">
           <Image
             src="/images/categories/comercial-02.png"
             alt="Escritório executivo Carol Orofino — presença"
@@ -124,7 +124,7 @@ export default async function ComercialPage({
             Projeto para que beleza e função andem juntas, sem concessões.
           </p>
         </div>
-        <div className="relative min-h-[400px] md:min-h-0">
+        <div className="relative aspect-square">
           <Image
             src="/images/categories/comercial-03.png"
             alt="Escritório comercial Carol Orofino — equilíbrio"
