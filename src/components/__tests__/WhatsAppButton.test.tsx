@@ -31,4 +31,11 @@ describe('WhatsAppButton', () => {
     render(<WhatsAppButton message="Test" />)
     expect(screen.getByRole('link')).toHaveAttribute('target', '_blank')
   })
+
+  it('renders inline variant with slate style', () => {
+    render(<WhatsAppButton variant="inline" message="oi" label="Falar" />)
+    const link = screen.getByRole('link')
+    expect(link.className).toContain('bg-slate')
+    expect(link.className).toContain('text-white')
+  })
 })

@@ -44,7 +44,7 @@ export default function WhatsAppButton({
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex items-center gap-2 rounded-none border border-text-primary px-6 py-3 text-sm font-body uppercase tracking-widest text-text-primary transition-colors hover:bg-text-primary hover:text-background focus:outline-none focus:ring-2 focus:ring-text-primary focus:ring-offset-2 ${className}`}
+      className={`inline-flex items-center gap-2 rounded-none bg-slate border border-white/60 px-6 py-3 font-display font-light italic text-white transition-opacity hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-white/60 focus:ring-offset-2 ${className}`}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
