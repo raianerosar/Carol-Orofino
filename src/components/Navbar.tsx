@@ -37,7 +37,7 @@ export default function Navbar({ transparent = false }: NavbarProps) {
   const navLinksLeft = [
     { href: `/${locale}`, label: t('home') },
     { href: `/${locale}/sobre`, label: t('about') },
-    { href: `/${locale}/servicos`, label: t('services') },
+    { href: `/${locale}/sobre#servicos`, label: t('services') },
   ]
 
   const navLinksRight = [
