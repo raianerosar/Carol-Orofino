@@ -19,9 +19,11 @@ jest.mock('framer-motion', () => {
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
           return forwardRef(({ children, ...props }: any, ref: any) => {
             // Strip framer-motion-only props before passing to DOM element
+            // eslint-disable-next-line @typescript-eslint/no-unused-vars
             const {
               initial, animate, exit, variants, custom, whileHover, whileTap,
               transition, layout, layoutId, onAnimationComplete,
+              viewport, whileInView,
               ...domProps
             } = props
             return createElement(tag, { ...domProps, ref }, children)
