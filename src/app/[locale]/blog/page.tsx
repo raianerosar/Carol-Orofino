@@ -5,6 +5,7 @@ import type { Metadata } from 'next'
 import { posts } from '@/data/posts'
 import BlogSidebar from '@/components/BlogSidebar'
 import type { Locale } from '@/lib/i18n'
+import { SectionDivider } from '@/components/SectionDivider'
 
 export async function generateMetadata({
   params,
@@ -48,7 +49,7 @@ export default async function BlogPage({
       </p>
 
       {/* Category filter */}
-      <div className="flex flex-wrap gap-3 mb-16">
+      <div className="flex flex-wrap gap-3">
         <Link
           href={`/${locale}/blog`}
           className={`font-body text-xs uppercase tracking-widest px-4 py-1.5 border transition-colors ${
@@ -73,6 +74,8 @@ export default async function BlogPage({
           </Link>
         ))}
       </div>
+
+      <SectionDivider />
 
       {/* Two-column grid */}
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-16">
