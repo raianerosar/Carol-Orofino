@@ -64,6 +64,7 @@ export const posts: Post[] = [
           {
             heading: 'Beyond the Golden Surface',
             body: 'For decades, luxury in interior design spoke in a single dialect: gilded frames, marble floors, crystal chandeliers. Opulence as evidence. The room announced its cost so the visitor would not need to ask.\n\nThat language is aging. The new luxury does not announce. It reveals — slowly, to those who know how to look. A single piece of furniture with the kind of craftsmanship that can only come from hands, not machines. A wall finish that changes color as the afternoon passes. A fabric that asks to be touched before it can be understood.',
+            image: '/images/blog/new-language-of-luxury-sala.png',
           },
           {
             heading: 'The Material Knows',
@@ -75,10 +76,12 @@ export const posts: Post[] = [
               { label: 'Linen & wool', value: 'Fabrics that breathe — tactile honesty, beauty that needs no performance' },
             ],
             tip: 'A truly luxury material needs no treatment to look expensive — it already is. When evaluating a piece, run your hand across it: honest materials reveal themselves to the touch before any label does.',
+            image: '/images/blog/new-language-of-luxury-closet.png',
           },
           {
             heading: 'Space as the Ultimate Privilege',
             body: 'In dense cities where square meters are currency, space itself has become the most exclusive material of all. Not space as emptiness — but space as intention. A room with room to breathe. A corridor wide enough to walk slowly. A reading corner that asks nothing of you except your presence.\n\nThe luxury interior of this decade gives space back to its inhabitant. It does not fill every corner. It trusts silence. It designs for stillness as much as for use.',
+            image: '/images/blog/new-language-of-luxury-living.png',
           },
           {
             heading: 'Personalization Over Prestige',
@@ -96,6 +99,7 @@ export const posts: Post[] = [
           {
             heading: 'Além da Superfície Dourada',
             body: 'Durante décadas, o luxo no design de interiores falou em um único dialeto: molduras douradas, pisos de mármore, lustres de cristal. A opulência como evidência. O ambiente anunciava seu custo para que o visitante não precisasse perguntar.\n\nEssa linguagem está envelhecendo. O novo luxo não anuncia. Ele revela — devagar, para quem sabe olhar. Uma única peça de mobiliário com o tipo de artesanato que só pode vir de mãos, não de máquinas. Um acabamento de parede que muda de cor conforme a tarde passa. Um tecido que pede para ser tocado antes de poder ser compreendido.',
+            image: '/images/blog/new-language-of-luxury-sala.png',
           },
           {
             heading: 'O Material Sabe',
@@ -107,10 +111,12 @@ export const posts: Post[] = [
               { label: 'Linho e lã', value: 'Tecidos que respiram — honestidade tátil, beleza que não precisa se anunciar' },
             ],
             tip: 'Um material de luxo real não precisa de tratamento para parecer caro — ele já é. Ao avaliar uma peça, passe a mão: materiais honestos se revelam no toque antes de qualquer rótulo.',
+            image: '/images/blog/new-language-of-luxury-closet.png',
           },
           {
             heading: 'O Espaço como Privilégio Máximo',
             body: 'Em cidades densas onde metros quadrados são moeda, o espaço em si tornou-se o material mais exclusivo de todos. Não o espaço como vazio — mas o espaço como intenção. Um ambiente com espaço para respirar. Um corredor largo o suficiente para se caminhar devagar. Um canto de leitura que não exige nada de você além de sua presença.\n\nO interior de luxo desta década devolve o espaço ao seu habitante. Não preenche cada canto. Confia no silêncio. Projeta para a quietude tanto quanto para o uso.',
+            image: '/images/blog/new-language-of-luxury-living.png',
           },
           {
             heading: 'Personalização Acima do Prestígio',
@@ -128,6 +134,7 @@ export const posts: Post[] = [
           {
             heading: 'Más Allá de la Superficie Dorada',
             body: 'Durante décadas, el lujo en el diseño de interiores habló en un único dialecto: marcos dorados, pisos de mármol, lámparas de cristal. La opulencia como evidencia. La habitación anunciaba su costo para que el visitante no necesitara preguntar.\n\nEse lenguaje está envejeciendo. El nuevo lujo no anuncia. Revela — despacio, para quienes saben mirar. Una única pieza de mobiliario con el tipo de artesanía que solo puede venir de manos, no de máquinas. Un acabado de pared que cambia de color al pasar la tarde. Una tela que pide ser tocada antes de poder ser comprendida.',
+            image: '/images/blog/new-language-of-luxury-sala.png',
           },
           {
             heading: 'El Material Sabe',
@@ -139,10 +146,12 @@ export const posts: Post[] = [
               { label: 'Lino y lana', value: 'Tejidos que respiran — honestidad táctil, belleza que no necesita anunciarse' },
             ],
             tip: 'Un material de lujo real no necesita tratamiento para parecer caro — ya lo es. Al evaluar una pieza, pase la mano: los materiales honestos se revelan al tacto antes que cualquier etiqueta.',
+            image: '/images/blog/new-language-of-luxury-closet.png',
           },
           {
             heading: 'El Espacio como Privilegio Máximo',
             body: 'En ciudades densas donde los metros cuadrados son moneda, el espacio mismo se ha convertido en el material más exclusivo de todos. No el espacio como vacío — sino el espacio como intención. Una habitación con espacio para respirar. Un pasillo lo suficientemente ancho para caminar despacio. Un rincón de lectura que no te exige nada más que tu presencia.\n\nEl interior de lujo de esta década devuelve el espacio a su habitante. No llena cada rincón. Confía en el silencio. Diseña para la quietud tanto como para el uso.',
+            image: '/images/blog/new-language-of-luxury-living.png',
           },
           {
             heading: 'Personalización por Encima del Prestigio',
