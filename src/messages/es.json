@@ -15,7 +15,7 @@
     "residencial": "Residencial",
     "comercial": "Comercial",
     "fachadas": "Fachadas",
-    "design-de-interiores": "Diseño de Interiores",
+    "inspire-se": "Inspire-se",
     "reforma": "Reforma",
     "viewAllProjects": "Ver todos los proyectos",
     "featuredTitle": "Proyectos Destacados",
@@ -38,7 +38,7 @@
       "residencial": "Residencial",
       "comercial": "Comercial",
       "reforma": "Reforma",
-      "design-de-interiores": "Diseño de Interiores"
+      "inspire-se": "Inspire-se"
     }
   },
   "project": {

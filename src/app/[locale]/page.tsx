@@ -126,14 +126,14 @@ export default async function HomePage({
               </span>
             </div>
           </Link>
-          {/* Design de Interiores */}
+          {/* Inspire-se */}
           <Link
-            href={`/${locale}/design-de-interiores`}
+            href={`/${locale}/inspire-se`}
             className="group relative overflow-hidden min-h-[70vw] md:min-h-[40vw] md:max-h-[500px]"
           >
             <Image
               src="/images/categories/design-interiores-card.jpg"
-              alt={t('design-de-interiores')}
+              alt={t('inspire-se')}
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
@@ -141,7 +141,7 @@ export default async function HomePage({
             <div className="absolute inset-0 bg-black/35 transition-colors duration-300 group-hover:bg-black/50" />
             <div className="absolute inset-0 flex items-center justify-center">
               <span className="font-display text-3xl md:text-4xl font-bold tracking-[0.2em] uppercase text-white text-center">
-                {t('design-de-interiores')}
+                {t('inspire-se')}
               </span>
             </div>
           </Link>

@@ -1,4 +1,4 @@
-// src/app/[locale]/design-de-interiores/page.tsx
+// src/app/[locale]/inspire-se/page.tsx
 import Image from 'next/image'
 import Link from 'next/link'
 import type { Metadata } from 'next'

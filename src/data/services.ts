@@ -72,7 +72,7 @@ export const services: Service[] = [
     },
   },
   {
-    id: 'design-de-interiores',
+    id: 'inspire-se',
     translations: {
       pt: {
         title: 'Design de Interiores',
