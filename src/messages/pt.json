@@ -285,6 +285,58 @@
       "button": "Preencher questionário"
     }
   },
+  "inspireSe": {
+    "metaTitle": "Inspire-se — Carol Orofino",
+    "metaDescription": "Estilos de design de interiores que traduzem personalidade em espaços únicos.",
+    "heroLabel": "Design de Interiores",
+    "heroTitle": "Inspire-se",
+    "back": "Voltar",
+    "cta": {
+      "title": "Vamos criar juntos?",
+      "body": "Conta como é o seu espaço e o que você sonha para ele.",
+      "button": "Preencher questionário"
+    },
+    "classicos": {
+      "title": "Clássicos",
+      "text": "O estilo clássico valoriza a elegância atemporal, a sofisticação e a harmonia. Baseia-se em peças estruturadas, cortes impecáveis e design equilibrado, sem depender de tendências passageiras. É um estilo que transmite segurança, autoridade e refinamento, priorizando qualidade, durabilidade e versatilidade tanto na moda quanto na decoração."
+    },
+    "contemporaneo": {
+      "title": "Contemporâneo",
+      "text": "O estilo contemporâneo é o design do momento atual, marcado pela constante evolução e adaptação às novas tendências. Ele valoriza a funcionalidade, o conforto e a sofisticação, criando ambientes equilibrados e modernos. Suas características incluem linhas limpas, espaços integrados e uma estética simples, sem excessos."
+    },
+    "minimalista": {
+      "title": "Minimalista",
+      "text": "O estilo minimalista baseia-se no conceito de \"menos é mais\", priorizando a simplicidade, funcionalidade e a eliminação de excessos. Ele valoriza espaços organizados, linhas retas, poucos elementos e alta qualidade nos materiais, criando ambientes elegantes, leves e atemporais."
+    },
+    "escandinavo": {
+      "title": "Escandinavo",
+      "text": "O estilo escandinavo é uma estética que une minimalismo, funcionalidade e aconchego, inspirada nos países nórdicos. Ele valoriza ambientes claros, organizados e bem iluminados, com móveis simples e design limpo. A forte presença de materiais naturais, como madeira clara e tecidos leves, traz equilíbrio e conforto ao espaço."
+    },
+    "industrial": {
+      "title": "Industrial",
+      "text": "O estilo industrial é inspirado em antigas fábricas e galpões urbanos, valorizando uma estética crua, funcional e cheia de personalidade. Ele destaca materiais brutos, estruturas aparentes e ambientes amplos, com um visual moderno e despojado. A proposta é mostrar a \"estrutura nua\" do espaço, transformando elementos como tubulações e vigas em parte do design."
+    },
+    "japandi": {
+      "title": "Japandi",
+      "text": "O estilo Japandi é a fusão entre o design escandinavo e a estética japonesa, unindo funcionalidade, simplicidade e aconchego. Ele combina o minimalismo zen com o conforto nórdico, criando ambientes equilibrados, elegantes e acolhedores. Valoriza o essencial, a natureza e a beleza imperfeita (wabi-sabi)."
+    },
+    "boho": {
+      "title": "Boho",
+      "text": "O estilo Boho é uma estética livre, criativa e cheia de personalidade, que mistura influências hippies, étnicas e vintage. Ele valoriza o conforto, a natureza e o artesanal, criando ambientes descontraídos, acolhedores e únicos. A decoração aposta em sobreposição de texturas, móveis naturais, plantas e peças com história, sem regras rígidas."
+    },
+    "moderno": {
+      "title": "Moderno",
+      "text": "O estilo moderno é marcado pela funcionalidade, simplicidade e uso de formas geométricas, seguindo o princípio de que \"a forma segue a função\". Ele valoriza ambientes integrados, bem iluminados e organizados, com design limpo e sem excessos. A estética é racional e elegante, focada na praticidade e na conexão entre interior e exterior."
+    },
+    "rustico": {
+      "title": "Rústico",
+      "text": "O estilo rústico valoriza a naturalidade, a simplicidade e a conexão com a natureza, trazendo o clima acolhedor do campo para os ambientes. Ele utiliza materiais brutos como madeira, pedra e ferro, destacando texturas, imperfeições e acabamentos naturais. Os espaços são quentes, confortáveis e cheios de personalidade."
+    },
+    "provencal": {
+      "title": "Provençal",
+      "text": "O estilo provençal é inspirado nas casas de campo do sul da França, unindo o charme rústico à elegância clássica. Ele cria ambientes românticos, leves e acolhedores, com móveis de madeira desgastada, detalhes curvos e elementos artesanais. A decoração valoriza texturas delicadas, estampas florais e materiais naturais como linho, ferro e cerâmica."
+    }
+  },
   "footer": {
     "rights": "Todos os direitos reservados."
   },

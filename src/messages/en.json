@@ -285,6 +285,58 @@
       "button": "Fill out questionnaire"
     }
   },
+  "inspireSe": {
+    "metaTitle": "Get Inspired — Carol Orofino",
+    "metaDescription": "Interior design styles that translate personality into unique spaces.",
+    "heroLabel": "Interior Design",
+    "heroTitle": "Get Inspired",
+    "back": "Back",
+    "cta": {
+      "title": "Shall we create together?",
+      "body": "Tell me about your space and what you dream for it.",
+      "button": "Fill out questionnaire"
+    },
+    "classicos": {
+      "title": "Classics",
+      "text": "Classic style values timeless elegance, sophistication, and harmony. It is built on structured pieces, impeccable cuts, and balanced design — independent of passing trends. A style that conveys confidence, authority, and refinement, prioritizing quality, durability, and versatility in both fashion and décor."
+    },
+    "contemporaneo": {
+      "title": "Contemporary",
+      "text": "Contemporary style is the design of the present moment, shaped by constant evolution and adaptation to new trends. It values functionality, comfort, and sophistication, creating balanced and modern environments. Key traits include clean lines, integrated spaces, and a simple aesthetic free of excess."
+    },
+    "minimalista": {
+      "title": "Minimalist",
+      "text": "Minimalist style is built on the concept of 'less is more,' prioritizing simplicity, functionality, and the elimination of excess. It values organized spaces, straight lines, few elements, and high-quality materials — creating elegant, light, and timeless environments."
+    },
+    "escandinavo": {
+      "title": "Scandinavian",
+      "text": "Scandinavian style is an aesthetic that blends minimalism, functionality, and coziness, inspired by the Nordic countries. It values bright, organized, well-lit environments with simple furniture and clean design. The strong presence of natural materials such as light wood and soft fabrics brings balance and comfort to the space."
+    },
+    "industrial": {
+      "title": "Industrial",
+      "text": "Industrial style draws inspiration from old factories and urban warehouses, celebrating a raw, functional, and personality-filled aesthetic. It highlights rough materials, exposed structures, and open spaces — modern and understated. The concept is to show the bare bones of the space, turning elements like pipes and beams into part of the design."
+    },
+    "japandi": {
+      "title": "Japandi",
+      "text": "Japandi style is the fusion of Scandinavian design and Japanese aesthetics, uniting functionality, simplicity, and warmth. It blends zen minimalism with Nordic comfort, creating balanced, elegant, and welcoming environments. It honors the essential, nature, and the beauty of imperfection (wabi-sabi)."
+    },
+    "boho": {
+      "title": "Boho",
+      "text": "Boho style is a free, creative, and personality-rich aesthetic that mixes hippie, ethnic, and vintage influences. It values comfort, nature, and craftsmanship, creating relaxed, welcoming, and unique spaces. Décor layers textures, natural furniture, plants, and storied pieces — without rigid rules."
+    },
+    "moderno": {
+      "title": "Modern",
+      "text": "Modern style is defined by functionality, simplicity, and geometric forms, following the principle that form follows function. It values integrated, well-lit, and organized spaces with clean design free of excess. The aesthetic is rational and elegant, focused on practicality and the connection between interior and exterior."
+    },
+    "rustico": {
+      "title": "Rustic",
+      "text": "Rustic style values naturalness, simplicity, and a connection to nature, bringing the cozy feel of the countryside into every space. It uses raw materials such as wood, stone, and iron, highlighting textures, imperfections, and natural finishes. Spaces are warm, comfortable, and full of character."
+    },
+    "provencal": {
+      "title": "Provençal",
+      "text": "Provençal style is inspired by the countryside homes of southern France, blending rustic charm with classic elegance. It creates romantic, light, and welcoming environments with weathered wooden furniture, curved details, and handcrafted elements. The décor celebrates delicate textures, floral prints, and natural materials such as linen, iron, and ceramic."
+    }
+  },
   "footer": {
     "rights": "All rights reserved."
   },
