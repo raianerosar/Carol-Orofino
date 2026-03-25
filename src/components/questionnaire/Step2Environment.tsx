@@ -2,6 +2,8 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { useImageUpload } from '@/components/hooks/use-image-upload'
+import { ArrowUp, X } from 'lucide-react'
 
 const fieldVariants = {
   hidden: { opacity: 0, y: 12 },
@@ -41,6 +43,10 @@ type Props = {
 
 export default function Step2Environment({ data, onChange, onNext, onBack, messages, nextLabel, backLabel }: Props) {
   const [errors, setErrors] = useState<Record<string, string>>({})
+
+  const floorPlanUpload = useImageUpload({
+    onUpload: () => {},
+  })
 
   function toggleRoom(key: string) {
     const next = data.roomType.includes(key)
@@ -131,30 +137,60 @@ export default function Step2Environment({ data, onChange, onNext, onBack, messa
 
       {/* Floor plan upload */}
       <motion.div custom={2} variants={fieldVariants} initial="hidden" animate="visible">
-        <label className="mb-1 block font-body text-xs uppercase tracking-[0.2em] text-slate">{messages.floorPlan}</label>
-        <label className={`flex items-center gap-3 cursor-pointer border px-4 py-3 transition-colors duration-150 ${
-          data.floorPlanFile ? 'border-walnut bg-walnut/5' : 'border-stone hover:border-latte'
-        }`}>
-          <input type="file" accept=".pdf,.png,.jpg,.jpeg" onChange={handleFloorPlan} className="sr-only" />
-          <span className={`shrink-0 font-body text-xs uppercase tracking-widest border border-current px-3 py-1 ${data.floorPlanFile ? 'text-walnut' : 'text-slate'}`}>
-            {data.floorPlanFile ? '✓' : '↑'}
-          </span>
-          <span className={`font-body text-sm truncate ${data.floorPlanFile ? 'text-walnut' : 'text-slate/60'}`}>
-            {data.floorPlanFile ? data.floorPlanFile.name : messages.floorPlanHint}
-          </span>
-        </label>
+        <p className="mb-3 font-body text-xs uppercase tracking-[0.2em] text-slate">{messages.floorPlan}</p>
+        <input
+          ref={floorPlanUpload.fileInputRef}
+          type="file"
+          accept=".pdf,.png,.jpg,.jpeg"
+          className="sr-only"
+          onChange={(e) => {
+            handleFloorPlan(e)
+            floorPlanUpload.handleFileChange(e)
+          }}
+        />
+        {!data.floorPlanFile ? (
+          <button
+            type="button"
+            onClick={floorPlanUpload.handleThumbnailClick}
+            className="flex items-center gap-4 border border-stone bg-transparent px-4 py-3 w-full text-left transition-colors duration-150 hover:border-latte group"
+          >
+            <span className="shrink-0 flex items-center justify-center w-9 h-9 border border-stone group-hover:border-latte transition-colors duration-150">
+              <ArrowUp className="w-4 h-4 text-slate" strokeWidth={1.5} />
+            </span>
+            <span className="font-body text-sm text-slate/60">{messages.floorPlanHint}</span>
+          </button>
+        ) : (
+          <div className="flex items-center gap-4 border border-walnut bg-walnut/5 px-4 py-3">
+            <span className="shrink-0 flex items-center justify-center w-9 h-9 border border-walnut">
+              <ArrowUp className="w-4 h-4 text-walnut" strokeWidth={1.5} />
+            </span>
+            <span className="font-body text-sm text-walnut truncate flex-1">{data.floorPlanFile.name}</span>
+            <button
+              type="button"
+              onClick={() => {
+                floorPlanUpload.handleRemove()
+                onChange({ ...data, floorPlanFile: null })
+              }}
+              className="shrink-0 p-1 hover:bg-walnut/10 transition-colors rounded-full"
+            >
+              <X className="w-4 h-4 text-walnut" strokeWidth={1.5} />
+            </button>
+          </div>
+        )}
         {errors.floorPlan && <p className="mt-1 font-body text-xs text-walnut/80">{errors.floorPlan}</p>}
       </motion.div>
 
       {/* Photos upload */}
       <motion.div custom={3} variants={fieldVariants} initial="hidden" animate="visible">
-        <label className="mb-1 block font-body text-xs uppercase tracking-[0.2em] text-slate">{messages.photos}</label>
-        <label className={`flex items-center gap-3 cursor-pointer border px-4 py-3 transition-colors duration-150 ${
-          data.photoFiles.length > 0 ? 'border-walnut bg-walnut/5' : 'border-stone hover:border-latte'
+        <p className="mb-3 font-body text-xs uppercase tracking-[0.2em] text-slate">{messages.photos}</p>
+        <label className={`flex items-center gap-4 cursor-pointer border px-4 py-3 transition-colors duration-150 ${
+          data.photoFiles.length > 0 ? 'border-walnut bg-walnut/5' : 'border-stone hover:border-latte group'
         }`}>
           <input type="file" accept=".png,.jpg,.jpeg,.webp,.mp4,.mov" multiple onChange={handlePhotos} className="sr-only" />
-          <span className={`shrink-0 font-body text-xs uppercase tracking-widest border border-current px-3 py-1 ${data.photoFiles.length > 0 ? 'text-walnut' : 'text-slate'}`}>
-            {data.photoFiles.length > 0 ? '✓' : '↑'}
+          <span className={`shrink-0 flex items-center justify-center w-9 h-9 border transition-colors duration-150 ${
+            data.photoFiles.length > 0 ? 'border-walnut' : 'border-stone group-hover:border-latte'
+          }`}>
+            <ArrowUp className={`w-4 h-4 ${data.photoFiles.length > 0 ? 'text-walnut' : 'text-slate'}`} strokeWidth={1.5} />
           </span>
           <span className={`font-body text-sm truncate ${data.photoFiles.length > 0 ? 'text-walnut' : 'text-slate/60'}`}>
             {data.photoFiles.length > 0
