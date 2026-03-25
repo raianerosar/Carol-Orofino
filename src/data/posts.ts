@@ -169,10 +169,12 @@ export const posts: Post[] = [
           {
             heading: 'What Minimalism Is Not',
             body: 'Minimalism has been misunderstood — reduced to a visual style, a Pinterest aesthetic of white walls and bare shelves. But real minimalism is not about owning fewer things. It is about making every thing deliberate.\n\nA minimalist room can contain warmth. It can contain color, texture, memory, life. What it cannot contain is noise — the visual noise of objects that have no reason to be there, furniture chosen by default, decoration that fills space without earning it.',
+            image: '/images/blog/discipline-of-subtraction-calor.png',
           },
           {
             heading: 'The Edit Is the Design',
             body: 'The most important skill in minimalist design is not what you add. It is what you remove. Every object that leaves a room makes the remaining objects more powerful. The chair that stays becomes the chair — not one of several, but the one, chosen, positioned, seen.\n\nThis is why minimalism is harder to design than maximalism. Addition is easy. Subtraction requires conviction. You have to be certain enough in what remains to let everything else go.',
+            image: '/images/blog/discipline-of-subtraction-edicao.png',
             table: [
               { label: 'Stays', value: 'Pieces with defined function, durable materials, right proportion' },
               { label: 'Goes', value: 'Objects with no reason to be there, duplicates, filler decoration' },
@@ -201,10 +203,12 @@ export const posts: Post[] = [
           {
             heading: 'O Que o Minimalismo Não É',
             body: 'O minimalismo foi mal compreendido — reduzido a um estilo visual, uma estética de paredes brancas e prateleiras nuas. Mas o minimalismo real não é sobre ter menos coisas. É sobre tornar cada coisa deliberada.\n\nUm ambiente minimalista pode conter calor. Pode conter cor, textura, memória, vida. O que ele não pode conter é ruído — o ruído visual de objetos que não têm razão de estar ali, móveis escolhidos por padrão, decoração que preenche o espaço sem merecê-lo.',
+            image: '/images/blog/discipline-of-subtraction-calor.png',
           },
           {
             heading: 'A Edição É o Design',
             body: 'A habilidade mais importante no design minimalista não é o que você adiciona. É o que você remove. Cada objeto que sai de um ambiente torna os objetos restantes mais poderosos. A cadeira que fica torna-se a cadeira — não uma de várias, mas aquela, escolhida, posicionada, vista.\n\nÉ por isso que o minimalismo é mais difícil de projetar do que o maximalismo. Adição é fácil. Subtração exige convicção. Você precisa ter certeza suficiente naquilo que resta para deixar todo o resto ir.',
+            image: '/images/blog/discipline-of-subtraction-edicao.png',
             table: [
               { label: 'Permanece', value: 'Peças com função definida, materiais duráveis, proporção certa' },
               { label: 'Sai', value: 'Objetos sem razão de estar, duplicatas, decoração que preenche vazio' },
@@ -233,10 +237,12 @@ export const posts: Post[] = [
           {
             heading: 'Lo Que el Minimalismo No Es',
             body: 'El minimalismo ha sido malinterpretado — reducido a un estilo visual, una estética de paredes blancas y estantes vacíos. Pero el minimalismo real no se trata de tener menos cosas. Se trata de hacer que cada cosa sea deliberada.\n\nUna habitación minimalista puede contener calidez. Puede contener color, textura, memoria, vida. Lo que no puede contener es ruido — el ruido visual de objetos que no tienen razón de estar ahí, muebles elegidos por defecto, decoración que llena el espacio sin ganárselo.',
+            image: '/images/blog/discipline-of-subtraction-calor.png',
           },
           {
             heading: 'La Edición Es el Diseño',
             body: 'La habilidad más importante en el diseño minimalista no es lo que agregas. Es lo que eliminas. Cada objeto que sale de una habitación hace que los objetos restantes sean más poderosos. La silla que se queda se convierte en la silla — no una de varias, sino la elegida, posicionada, vista.\n\nPor eso el minimalismo es más difícil de diseñar que el maximalismo. La adición es fácil. La sustracción requiere convicción. Tienes que estar suficientemente seguro de lo que permanece para dejar ir todo lo demás.',
+            image: '/images/blog/discipline-of-subtraction-edicao.png',
             table: [
               { label: 'Permanece', value: 'Piezas con función definida, materiales duraderos, proporción correcta' },
               { label: 'Sale', value: 'Objetos sin razón de estar, duplicados, decoración que llena vacíos' },
