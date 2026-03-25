@@ -194,6 +194,18 @@ export default async function BlogPostPage({
                         </p>
                       </div>
                     )}
+                    {section.image && (
+                      <div className="mt-10">
+                        <Image
+                          src={section.image}
+                          alt={section.heading}
+                          width={800}
+                          height={800}
+                          className="w-full"
+                          style={{ aspectRatio: '1 / 1', objectFit: 'contain' }}
+                        />
+                      </div>
+                    )}
                   </>
                 )}
               </section>

@@ -4,6 +4,7 @@ export interface TextSection {
   body: string
   table?: { label: string; value: string }[]
   tip?: string
+  image?: string
 }
 
 export interface FabricSection {
@@ -285,6 +286,7 @@ export const posts: Post[] = [
               { label: 'Handmade ceramic', value: 'Imperfection as quality — each piece is unique and irreplaceable' },
             ],
             tip: 'In Scandinavian design, textures do not decorate — they narrate. When combining materials, prioritize tactile contrast: smooth with rough, cool with warm, opaque with translucent.',
+            image: '/images/blog/where-silence-has-a-shape-cozinha.png',
           },
           {
             heading: 'The Luxury of Less',
@@ -293,6 +295,7 @@ export const posts: Post[] = [
           {
             heading: 'Light as the Most Expensive Material',
             body: 'No designer can purchase what the North gives freely — that particular quality of Scandinavian light: low, angular, generous. It travels across a room like a slow conversation, touching the texture of a wool throw, the edge of a ceramic vase, the pale grain of an unfinished wall.\n\nLight is never incidental. Sheer linen curtains are chosen not merely to soften a window, but to choreograph how light enters a room across the hours of a day. Furniture is positioned not for convention, but for the way morning light will fall. Natural light, in this philosophy, is not a supplement — it is the design itself.',
+            image: '/images/blog/where-silence-has-a-shape-banheiro.png',
           },
         ],
         conclusion:
@@ -318,6 +321,7 @@ export const posts: Post[] = [
               { label: 'Cerâmica artesanal', value: 'Imperfeição como qualidade — cada peça é única e insubstituível' },
             ],
             tip: 'No design escandinavo, as texturas não decoram — narram. Ao combinar materiais, priorize o contraste tátil: liso com rugoso, frio com quente, opaco com translúcido.',
+            image: '/images/blog/where-silence-has-a-shape-cozinha.png',
           },
           {
             heading: 'O Luxo do Menos',
@@ -326,6 +330,7 @@ export const posts: Post[] = [
           {
             heading: 'A Luz como o Material Mais Caro',
             body: 'Nenhum designer pode comprar o que o Norte oferece livremente — aquela qualidade particular da luz escandinava: baixa, angular, generosa. Ela percorre um ambiente como uma conversa lenta, tocando a textura de uma manta de lã, a borda de um vaso de cerâmica, o fio pálido de uma parede inacabada.\n\nA luz nunca é incidental. Cortinas de linho translúcido são escolhidas não apenas para suavizar uma janela, mas para coreografar como a luz entra em um ambiente ao longo das horas do dia. O mobiliário é posicionado não por convenção, mas pela forma como a luz da manhã vai pousar. A luz natural, nessa filosofia, não é um suplemento — ela é o design.',
+            image: '/images/blog/where-silence-has-a-shape-banheiro.png',
           },
         ],
         conclusion:
@@ -351,6 +356,7 @@ export const posts: Post[] = [
               { label: 'Cerámica artesanal', value: 'La imperfección como calidad — cada pieza es única e irremplazable' },
             ],
             tip: 'En el diseño escandinavo, las texturas no decoran — narran. Al combinar materiales, prioriza el contraste táctil: liso con rugoso, frío con cálido, opaco con translúcido.',
+            image: '/images/blog/where-silence-has-a-shape-cozinha.png',
           },
           {
             heading: 'El Lujo de lo Menos',
@@ -359,6 +365,7 @@ export const posts: Post[] = [
           {
             heading: 'La Luz como el Material Más Caro',
             body: 'Ningún diseñador puede comprar lo que el Norte ofrece libremente — esa calidad particular de la luz escandinava: baja, angular, generosa. Recorre una habitación como una conversación lenta, tocando la textura de una manta de lana, el borde de un jarrón de cerámica, el veteado pálido de una pared sin acabar.\n\nLa luz nunca es incidental. Las cortinas de lino translúcido se eligen no solo para suavizar una ventana, sino para coreografiar cómo la luz entra en una habitación a lo largo de las horas del día. El mobiliario se posiciona no por convención, sino por la forma en que la luz de la mañana caerá. La luz natural, en esta filosofía, no es un suplemento — es el diseño.',
+            image: '/images/blog/where-silence-has-a-shape-banheiro.png',
           },
         ],
         conclusion:
